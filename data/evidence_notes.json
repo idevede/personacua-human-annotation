@@ -1,0 +1,39 @@
+{
+  "credit": "Grok 4.7",
+  "cases": {
+    "art--3868f9b52e96--expert": {
+      "B": {
+        "R1": {
+          "frames": [34, 46, 47, 53],
+          "support": "yes",
+          "finding": "第 34 张是 Company 3 的 Systems Engineer, Sr。画面上写着 Microsoft、O365、M365、Azure、Active Directory、Entra ID、PowerShell 和 Windows Server。第 46 张是 AWS Certified Solutions Architect - Associate。第 47 张是 Microsoft Certified: Azure Administrator Associate。第 53 张是 Avid 的 NX423 课程，写着 7 小时自学再加 16 小时讲师课。",
+          "verdict": "支持。职位要求和至少两条认证都能在这些截图里看到。请核对画面上的字是不是这些。"
+        },
+        "R2": {
+          "frames": [1, 36, 55],
+          "support": "partial",
+          "finding": "第 1 张是 editorsguild.com 的 Join West Coast：先拿到工会工作，入职后 30 天内加入 Local 700，洛杉矶多数工种要先上 CSATF 名册。第 36 张是入会费表，Engineer 一行是 $3,800 入会费加 $100 手续费，有效期到 2027-07-31。第 55 张是结束时还开着的同一页，停在费用说明，写着可以先付一半、六个月内付清。Engineer 要做满多少天，这些截图里没有。",
+          "verdict": "只支持一部分。入会步骤和 Engineer 费用在画面里。100 天资格没有出现在截图上，不要只凭最终回答里的那句话。"
+        },
+        "R3": {
+          "frames": [10, 58, 6],
+          "support": "partial",
+          "finding": "第 10 张是 Amazon Jobs 上的 Production Workflow Engineer，Amazon Studios LLC，地点 Culver City，页面还留着 Apply now。第 58 张是结束时仍开着的 Company 3 页：Systems Engineer, Sr (Temporary)，Santa Monica，Onsite，11:00am–8:00pm PST，年薪 $80,000–$130,000。第 6 张那条 Built In 职位写着 Sorry, this job was removed，不能算还在招。",
+          "verdict": "只支持一部分。两个雇主页上的职位、公司和地点支持这条。签证或工作许可在第 10 张和第 58 张的可见画面里都没有，申请表顶部只有姓名和邮箱。sponsorship 这一半截图不支持。"
+        },
+        "R4": {
+          "frames": [7],
+          "support": "no",
+          "finding": "第 7 张打开了 CNN 的 The Donald Trump-Rosie O'Donnell feud: A timeline，作者 Deena Zaru，更新于 2017-08-14。隐私弹窗挡住正文，后面同一页的截图仍是这个弹窗，没有点 Agree。December 2006、August 2015、September 26, 2016 这三个日期只写在最终回答里。",
+          "verdict": "不支持用截图核对这三个节点。最终回答里有三个日期，但第 7 张看不到正文。请先确认弹窗还在，再决定这条是证据不足，还是只根据回答给分。"
+        },
+        "R5": {
+          "frames": [55, 56, 57, 58],
+          "support": "yes",
+          "finding": "最终回答分成雇主要求、培训、Local 700 和时间线，并写了哪些页还开着。第 55 张是结束时的 Join West Coast，第 56 张是 Engineer 费用表，第 57 张是 Amazon 的 Production Workflow Engineer，第 58 张是 Company 3 的 Systems Engineer, Sr。",
+          "verdict": "支持。简报分了节，这四张也还开着。请核对它们是不是回答里点名的那几页。"
+        }
+      }
+    }
+  }
+}

@@ -511,27 +511,63 @@ function moveFrame(slot, output, delta) {
 
 const decisionLabels = { yes: "得分", no: "不得分", unsure: "证据不足" };
 
+const supportLabels = {
+  yes: "支持",
+  partial: "只支持一部分",
+  no: "不支持",
+};
+
+function evidenceFor(item, slot, rubricId) {
+  const output = (item.outputs || []).find(entry => entry?.slot === slot);
+  const note = output?.evidence_notes?.[rubricId];
+  if (!note || typeof note.finding !== "string" || !note.finding.trim()) return null;
+  const frames = [...new Set((note.frames || []).map(Number).filter(frame => frame >= 1))];
+  if (!frames.length || !supportLabels[note.support]) return null;
+  return { ...note, frames };
+}
+
+function jumpToFrame(item, slot, frameNumber) {
+  const output = outputsBySlot(item)[slot];
+  if (!output) return;
+  const frames = framesFor(output);
+  const index = Math.max(0, Math.min(frames.length - 1, Number(frameNumber) - 1));
+  state.frameIndex[slot] = index;
+  renderTrace(slot, output);
+  $(`[data-trace="${slot}"]`)?.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
 function renderRubrics(item) {
   const record = caseRecord(item.case_id);
   const slot = activeSlot(item);
-  const credit = state.manifest?.guide_credit || "Grok 4.7";
+  const credit = state.manifest?.evidence_credit || state.manifest?.guide_credit || "Grok 4.7";
   el.rubricList.innerHTML = (item.rubrics || []).map(rubric => {
     const rubricRecord = record.rubrics?.[rubric.rubric_id] || {};
     const criterion = rubric.criterion_zh || rubric.criterion || rubric.requirement || "";
     const english = rubric.criterion_zh && rubric.criterion ? rubric.criterion : "";
+    const evidence = evidenceFor(item, slot, rubric.rubric_id);
     const others = slotsFor(item).filter(name => name !== slot).map(name => {
       const value = rubricRecord[name];
       return `模型 ${name}：${decisionLabels[value] || "还没选"}`;
     }).join(" · ");
     const checkerOnly = /prints SUCCESS|state checker/i.test(rubric.verification || "");
+    const evidenceHtml = evidence ? `
+      <div class="hint evidence-note">
+        <div class="hint-kicker">${escapeHtml(credit)} 的提示</div>
+        <p>${escapeHtml(evidence.finding)}</p>
+        <p class="evidence-verdict ${escapeHtml(evidence.support)}">${escapeHtml(supportLabels[evidence.support])}。${escapeHtml(evidence.verdict || "")}</p>
+        <div class="evidence-jumps">
+          ${evidence.frames.map(frame => `<button type="button" data-jump-frame="${frame}">打开第 ${frame} 张</button>`).join("")}
+        </div>
+      </div>` : "";
     return `
       <article class="rubric-row" data-rubric="${escapeHtml(rubric.rubric_id)}">
         <div class="rubric-copy">
           <span class="rubric-id">${escapeHtml(rubric.rubric_id)}</span>
           <div class="rubric-criterion">${escapeHtml(criterion)}</div>
           ${english ? `<details class="rubric-english"><summary>英文标准</summary><div>${escapeHtml(english)}</div></details>` : ""}
-          ${rubric.hint_zh ? `<div class="hint"><div class="hint-kicker">${escapeHtml(credit)} 的提示</div><p>${escapeHtml(rubric.hint_zh)}</p></div>` : ""}
-          ${!rubric.hint_zh && rubric.verification && !checkerOnly ? `<div class="rubric-verification">可以对照：${escapeHtml(rubric.verification)}</div>` : ""}
+          ${evidenceHtml}
+          ${!evidence && rubric.hint_zh ? `<div class="hint"><div class="hint-kicker">${escapeHtml(credit)} 的提示</div><p>${escapeHtml(rubric.hint_zh)}</p></div>` : ""}
+          ${!evidence && !rubric.hint_zh && rubric.verification && !checkerOnly ? `<div class="rubric-verification">可以对照：${escapeHtml(rubric.verification)}</div>` : ""}
         </div>
         <div class="decision-box" role="radiogroup" aria-label="${escapeHtml(rubric.rubric_id)} 模型 ${slot} 判定">
           <div class="decision-heading">模型 ${escapeHtml(slot)}</div>
@@ -563,6 +599,9 @@ function renderRubrics(item) {
     caseData.rubrics[rubricId] ||= {};
     caseData.rubrics[rubricId].note = event.currentTarget.value;
     changed(item);
+  }));
+  $$("[data-jump-frame]", el.rubricList).forEach(button => button.addEventListener("click", () => {
+    jumpToFrame(item, slot, button.dataset.jumpFrame);
   }));
 }
 

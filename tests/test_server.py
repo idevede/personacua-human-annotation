@@ -14,6 +14,7 @@ sys.path.insert(0, str(PROJECT))
 
 from server import (  # noqa: E402
     AnnotationStore,
+    attach_evidence_notes,
     create_server,
     enrich_public_manifest,
     safe_annotator_name,
@@ -175,6 +176,29 @@ class ServerTest(unittest.TestCase):
         )
         self.assertEqual(enriched["cases"][0]["title_zh"], "中文标题")
         self.assertEqual(enriched["cases"][0]["rubrics"][0]["hint_zh"], "看到这些就可以判得分。")
+        noted = attach_evidence_notes(
+            enriched,
+            {
+                "credit": "Grok 4.7",
+                "cases": {
+                    "case-1": {
+                        "A": {
+                            "R1": {
+                                "frames": [5, 5, 0],
+                                "support": "partial",
+                                "finding": "第 5 张截图里有结果。",
+                                "verdict": "只支持一部分。",
+                            }
+                        }
+                    }
+                },
+            },
+        )
+        note = noted["cases"][0]["outputs"][0]["evidence_notes"]["R1"]
+        self.assertEqual(note["frames"], [5])
+        self.assertEqual(note["support"], "partial")
+        self.assertEqual(noted["evidence_credit"], "Grok 4.7")
+        self.assertNotIn("evidence_notes", noted["cases"][0]["outputs"][1])
         self.assertNotIn("model", json.dumps(enriched))
         store = AnnotationStore(self.root)
         manifest = store.public_manifest()

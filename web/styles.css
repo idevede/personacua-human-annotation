@@ -243,6 +243,16 @@ input:focus, select:focus, textarea:focus, button:focus-visible, summary:focus-v
 .hint { margin-top: 12px; padding: 10px 12px; border-radius: 10px; background: var(--amber-soft); }
 .hint-kicker { color: var(--amber); font-size: 12px; font-weight: 800; }
 .hint p { margin: 4px 0 0; font-size: 13px; line-height: 1.55; }
+.evidence-note { border: 1px solid rgb(160 100 19 / 28%); }
+.evidence-verdict { margin-top: 8px; font-size: 13px; font-weight: 750; line-height: 1.5; }
+.evidence-verdict.yes { color: var(--green); }
+.evidence-verdict.partial { color: var(--amber); }
+.evidence-verdict.no { color: var(--coral); }
+.evidence-jumps { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.evidence-jumps button {
+  height: 28px; padding: 0 10px; border: 1px solid var(--line-strong); border-radius: 999px;
+  background: #fff; color: var(--navy); font-size: 12px; font-weight: 750;
+}
 .other-slots { grid-column: 2; color: var(--muted); font-size: 12px; line-height: 1.45; }
 .rubric-id { display: inline-flex; margin-bottom: 6px; padding: 3px 7px; border-radius: 5px; color: var(--coral); background: var(--coral-soft); font-size: 10px; font-weight: 850; }
 .rubric-criterion { font-size: 13px; line-height: 1.55; }

@@ -214,6 +214,67 @@ def attach_scenarios(manifest: dict[str, Any], catalog: dict[str, Any]) -> dict[
     return attached
 
 
+def clean_evidence_note(value: Any) -> dict[str, Any] | None:
+    """Keep only the fields the annotation page shows for one rubric."""
+    if not isinstance(value, dict):
+        return None
+    finding = value.get("finding")
+    verdict = value.get("verdict")
+    support = value.get("support")
+    frames = value.get("frames")
+    if not isinstance(finding, str) or not finding.strip():
+        return None
+    if not isinstance(verdict, str) or not verdict.strip():
+        return None
+    if support not in {"yes", "partial", "no"}:
+        return None
+    if not isinstance(frames, list) or not frames:
+        return None
+    cleaned_frames: list[int] = []
+    for frame in frames:
+        if isinstance(frame, bool) or not isinstance(frame, int) or frame < 1 or frame in cleaned_frames:
+            continue
+        cleaned_frames.append(frame)
+    if not cleaned_frames:
+        return None
+    return {
+        "frames": cleaned_frames,
+        "support": support,
+        "finding": finding.strip(),
+        "verdict": verdict.strip(),
+    }
+
+
+def attach_evidence_notes(manifest: dict[str, Any], notes: dict[str, Any]) -> dict[str, Any]:
+    """Attach per-model screenshot findings. Notes are public and contain no model names."""
+    cases = notes.get("cases") if isinstance(notes, dict) else None
+    if not isinstance(cases, dict):
+        return manifest
+    attached = copy.deepcopy(manifest)
+    if isinstance(notes.get("credit"), str) and notes["credit"].strip():
+        attached["evidence_credit"] = notes["credit"].strip()
+    for case in attached.get("cases") or []:
+        if not isinstance(case, dict):
+            continue
+        bundle = cases.get(str(case.get("case_id")))
+        if not isinstance(bundle, dict):
+            continue
+        for output in case.get("outputs") or []:
+            if not isinstance(output, dict):
+                continue
+            slot_notes = bundle.get(str(output.get("slot")))
+            if not isinstance(slot_notes, dict):
+                continue
+            cleaned = {
+                str(rubric_id): note
+                for rubric_id, raw in slot_notes.items()
+                if (note := clean_evidence_note(raw)) is not None
+            }
+            if cleaned:
+                output["evidence_notes"] = cleaned
+    return attached
+
+
 def validate_annotations(annotations: dict[str, Any], manifest: dict[str, Any]) -> None:
     """Validate the browser's compact, partially completed annotation schema."""
     case_rubrics: dict[str, set[str]] = {}
@@ -272,6 +333,7 @@ class AnnotationStore:
         self.private_manifest_path = self.data_root / "manifest.private.json"
         self.guide_path = self.data_root / "guide.zh.json"
         self.scenarios_path = self.data_root / "scenarios.json"
+        self.evidence_path = self.data_root / "evidence_notes.json"
         self.annotations_root.mkdir(parents=True, exist_ok=True)
         self._write_lock = threading.Lock()
         self._public_manifest_lock = threading.Lock()
@@ -288,7 +350,13 @@ class AnnotationStore:
             file_stat = path.stat()
             return (file_stat.st_mtime_ns, file_stat.st_size)
 
-        return (stat.st_mtime_ns, stat.st_size, file_signature(self.guide_path), file_signature(self.scenarios_path))
+        return (
+            stat.st_mtime_ns,
+            stat.st_size,
+            file_signature(self.guide_path),
+            file_signature(self.scenarios_path),
+            file_signature(self.evidence_path),
+        )
 
     def public_manifest(self) -> dict[str, Any]:
         signature = self._manifest_signature()
@@ -300,8 +368,10 @@ class AnnotationStore:
                 manifest = strip_private_manifest_fields(read_json(self.public_manifest_path))
                 guide = read_json(self.guide_path) if self.guide_path.is_file() else {}
                 scenarios = read_json(self.scenarios_path) if self.scenarios_path.is_file() else {}
-                self._public_manifest_cache = attach_scenarios(
-                    enrich_public_manifest(manifest, guide), scenarios
+                evidence = read_json(self.evidence_path) if self.evidence_path.is_file() else {}
+                self._public_manifest_cache = attach_evidence_notes(
+                    attach_scenarios(enrich_public_manifest(manifest, guide), scenarios),
+                    evidence,
                 )
                 self._public_manifest_signature = signature
             return self._public_manifest_cache
