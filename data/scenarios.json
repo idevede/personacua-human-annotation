@@ -1,0 +1,533 @@
+{
+  "principle": "一条任务进哪个场景，只看它的 domain，对照 PersonaCUABench 里 persona_assignments.py 的 DOMAIN_FAMILY。REAL 的模拟网站跟它实际在办的事走：订桌是美食，住宿或打车是出行，收件箱是效率，招人是职业。",
+  "roles_principle": "每个场景固定四个人设：专家是做这行的，年长的人在旁边生活过但没有专门学，年轻的人有兴趣但没受过训练，务实的人会做但忙。人设文件在该场景的 personas/ 目录。",
+  "sources": {
+    "assignments": "src/persona_assignments.py",
+    "personas": "src/make_personas.py",
+    "results": "src/results/s1"
+  },
+  "family_order": [
+    "art",
+    "community",
+    "ecommerce",
+    "food",
+    "health",
+    "lifestyle",
+    "productivity",
+    "professional",
+    "science",
+    "tech",
+    "travel"
+  ],
+  "families": {
+    "art": {
+      "label": "艺术",
+      "focus": "手作、布置、创作项目",
+      "domains": [
+        {
+          "id": "Art",
+          "label": "艺术"
+        }
+      ],
+      "principle": "手作、布置、创作项目。domain 是艺术的任务归到这个场景。",
+      "persona_files": [
+        "scenarios/art/personas/art-expert.yaml",
+        "scenarios/art/personas/art-senior.yaml",
+        "scenarios/art/personas/art-young.yaml",
+        "scenarios/art/personas/art-practical.yaml"
+      ],
+      "tasks": [
+        {
+          "task_id": "3868f9b52e96067b4f55834a3b110e1228b48e65",
+          "title": "Entry path into LA post-production IT",
+          "title_zh": "洛杉矶后期制作 IT 的入行路径",
+          "suite": "odysseys",
+          "tag": "odysseys",
+          "domain": "Art",
+          "domain_zh": "艺术",
+          "folder": "scenarios/art/tasks/odysseys--3868f9b52e96067b4f55834a3b110e1228b48e65",
+          "task_file": "src/task_suites/odysseys/000-core.json",
+          "in_annotation": true
+        },
+        {
+          "task_id": "80257c727b8e8c5426c1b03a2a4493231747e5d7",
+          "title": "Pieces for a small React art prototype",
+          "title_zh": "做一个很小的 React 艺术原型",
+          "suite": "odysseys",
+          "tag": "odysseys",
+          "domain": "Art",
+          "domain_zh": "艺术",
+          "folder": "scenarios/art/tasks/odysseys--80257c727b8e8c5426c1b03a2a4493231747e5d7",
+          "task_file": "src/task_suites/odysseys/000-core.json",
+          "in_annotation": true
+        }
+      ]
+    },
+    "community": {
+      "label": "社区",
+      "focus": "本地活动、食物柜、捐赠、节日、志愿",
+      "domains": [
+        {
+          "id": "Community",
+          "label": "社区"
+        }
+      ],
+      "principle": "本地活动、食物柜、捐赠、节日、志愿。domain 是社区的任务归到这个场景。",
+      "persona_files": [
+        "scenarios/community/personas/community-expert.yaml",
+        "scenarios/community/personas/community-senior.yaml",
+        "scenarios/community/personas/community-young.yaml",
+        "scenarios/community/personas/community-practical.yaml"
+      ],
+      "tasks": [
+        {
+          "task_id": "2cb0ed2a5df6053c6c982a5c5d436d25e006370f",
+          "title": "Baltimore event night from official pages",
+          "title_zh": "用官方页面安排巴尔的摩的一晚",
+          "suite": "odysseys",
+          "tag": "odysseys",
+          "domain": "Community",
+          "domain_zh": "社区",
+          "folder": "scenarios/community/tasks/odysseys--2cb0ed2a5df6053c6c982a5c5d436d25e006370f",
+          "task_file": "src/task_suites/odysseys/000-core.json",
+          "in_annotation": true
+        },
+        {
+          "task_id": "140960bb7293bdeeb6bcc60931681cb9b815351b",
+          "title": "Little free pantries around Chapel Hill",
+          "title_zh": "教堂山附近的社区食物箱",
+          "suite": "odysseys",
+          "tag": "odysseys",
+          "domain": "Community",
+          "domain_zh": "社区",
+          "folder": "scenarios/community/tasks/odysseys--140960bb7293bdeeb6bcc60931681cb9b815351b",
+          "task_file": "src/task_suites/odysseys/000-core.json",
+          "in_annotation": true
+        }
+      ]
+    },
+    "ecommerce": {
+      "label": "电商",
+      "focus": "商品比较、球鞋、汽车、优惠",
+      "domains": [
+        {
+          "id": "Ecommerce",
+          "label": "电商"
+        }
+      ],
+      "principle": "商品比较、球鞋、汽车、优惠。domain 是电商的任务归到这个场景。",
+      "persona_files": [
+        "scenarios/ecommerce/personas/ecommerce-expert.yaml",
+        "scenarios/ecommerce/personas/ecommerce-senior.yaml",
+        "scenarios/ecommerce/personas/ecommerce-young.yaml",
+        "scenarios/ecommerce/personas/ecommerce-practical.yaml"
+      ],
+      "tasks": [
+        {
+          "task_id": "44f1e02116715d5fe313996811b358fe25bc3ee4",
+          "title": "Accessory shortlist for the household's cars",
+          "title_zh": "家里几辆车的配件短名单",
+          "suite": "odysseys",
+          "tag": "odysseys",
+          "domain": "Ecommerce",
+          "domain_zh": "电商",
+          "folder": "scenarios/ecommerce/tasks/odysseys--44f1e02116715d5fe313996811b358fe25bc3ee4",
+          "task_file": "src/task_suites/odysseys/000-core.json",
+          "in_annotation": true
+        },
+        {
+          "task_id": "63d68bb25e279fc22e6e3592d8ca59add33b6eb1",
+          "title": "Family car ≤ $50k near Minneapolis (Cars.com)",
+          "title_zh": "明尼阿波利斯附近 5 万美元以内的家用车",
+          "suite": "odysseys",
+          "tag": "odysseys",
+          "domain": "Ecommerce",
+          "domain_zh": "电商",
+          "folder": "scenarios/ecommerce/tasks/odysseys--63d68bb25e279fc22e6e3592d8ca59add33b6eb1",
+          "task_file": "src/task_suites/odysseys/000-core.json",
+          "in_annotation": true
+        }
+      ]
+    },
+    "food": {
+      "label": "美食",
+      "focus": "食谱、备餐、餐饮、订位、外卖",
+      "domains": [
+        {
+          "id": "Food",
+          "label": "美食"
+        },
+        {
+          "id": "DashDish (DoorDash)",
+          "label": "外卖 DashDish（DoorDash）"
+        },
+        {
+          "id": "OpenDining (OpenTable)",
+          "label": "订餐 OpenDining（OpenTable）"
+        }
+      ],
+      "principle": "食谱、备餐、餐饮、订位、外卖。domain 是美食、外卖 DashDish（DoorDash）、订餐 OpenDining（OpenTable）的任务归到这个场景。",
+      "persona_files": [
+        "scenarios/food/personas/food-expert.yaml",
+        "scenarios/food/personas/food-senior.yaml",
+        "scenarios/food/personas/food-young.yaml",
+        "scenarios/food/personas/food-practical.yaml"
+      ],
+      "tasks": [
+        {
+          "task_id": "082aa17f3e88c3ce10796244e3677c5643dd19c9",
+          "title": "Roasted Brussels sprouts recipe",
+          "title_zh": "烤抱子甘蓝食谱和新厨房准备",
+          "suite": "odysseys",
+          "tag": "odysseys",
+          "domain": "Food",
+          "domain_zh": "美食",
+          "folder": "scenarios/food/tasks/odysseys--082aa17f3e88c3ce10796244e3677c5643dd19c9",
+          "task_file": "src/task_suites/odysseys/000-core.json",
+          "in_annotation": true
+        },
+        {
+          "task_id": "4fa0f20b6ff73e4a86442a1f0dc16ca4ab03582d",
+          "title": "4fa0f20b6ff7",
+          "title_zh": "在 Haight-Ashbury 订一顿商务晚餐",
+          "suite": "real",
+          "tag": "real",
+          "domain": "OpenDining (OpenTable)",
+          "domain_zh": "订餐 OpenDining（OpenTable）",
+          "folder": "scenarios/food/tasks/real--4fa0f20b6ff73e4a86442a1f0dc16ca4ab03582d",
+          "task_file": "src/task_suites/real/000-core.json",
+          "in_annotation": true
+        }
+      ]
+    },
+    "health": {
+      "label": "健康",
+      "focus": "健身房、瑜伽、诊所、外科、健身计划",
+      "domains": [
+        {
+          "id": "Health",
+          "label": "健康"
+        },
+        {
+          "id": "Fitness",
+          "label": "健身"
+        }
+      ],
+      "principle": "健身房、瑜伽、诊所、外科、健身计划。domain 是健康、健身的任务归到这个场景。",
+      "persona_files": [
+        "scenarios/health/personas/health-expert.yaml",
+        "scenarios/health/personas/health-senior.yaml",
+        "scenarios/health/personas/health-young.yaml",
+        "scenarios/health/personas/health-practical.yaml"
+      ],
+      "tasks": [
+        {
+          "task_id": "69782bfcfdb3311496bc9048bf66915b33e692cd",
+          "title": "Compare Pilates studios in Clovis",
+          "title_zh": "比较 Clovis 的普拉提工作室",
+          "suite": "odysseys",
+          "tag": "odysseys",
+          "domain": "Health",
+          "domain_zh": "健康",
+          "folder": "scenarios/health/tasks/odysseys--69782bfcfdb3311496bc9048bf66915b33e692cd",
+          "task_file": "src/task_suites/odysseys/000-core.json",
+          "in_annotation": true
+        },
+        {
+          "task_id": "256342f13c0a03e080f92ee073153fe33a6881c0",
+          "title": "NYC knee-surgeon shortlist (ACL / meniscus)",
+          "title_zh": "纽约膝盖外科医生短名单",
+          "suite": "odysseys",
+          "tag": "odysseys",
+          "domain": "Health",
+          "domain_zh": "健康",
+          "folder": "scenarios/health/tasks/odysseys--256342f13c0a03e080f92ee073153fe33a6881c0",
+          "task_file": "src/task_suites/odysseys/000-core.json",
+          "in_annotation": true
+        }
+      ]
+    },
+    "lifestyle": {
+      "label": "生活",
+      "focus": "衣服、礼物、家居、个人整理、房源",
+      "domains": [
+        {
+          "id": "Lifestyle",
+          "label": "生活方式"
+        },
+        {
+          "id": "Zilloft (Zillow)",
+          "label": "找房 Zilloft（Zillow）"
+        }
+      ],
+      "principle": "衣服、礼物、家居、个人整理、房源。domain 是生活方式、找房 Zilloft（Zillow）的任务归到这个场景。",
+      "persona_files": [
+        "scenarios/lifestyle/personas/lifestyle-expert.yaml",
+        "scenarios/lifestyle/personas/lifestyle-senior.yaml",
+        "scenarios/lifestyle/personas/lifestyle-young.yaml",
+        "scenarios/lifestyle/personas/lifestyle-practical.yaml"
+      ],
+      "tasks": [
+        {
+          "task_id": "d8fe04d1cf29251d68382cde58f4424e80bad07c",
+          "title": "Private shared-journaling setup and AI access",
+          "title_zh": "注重隐私的双人日记，以及外部 AI 能碰到什么",
+          "suite": "odysseys",
+          "tag": "odysseys",
+          "domain": "Lifestyle",
+          "domain_zh": "生活方式",
+          "folder": "scenarios/lifestyle/tasks/odysseys--d8fe04d1cf29251d68382cde58f4424e80bad07c",
+          "task_file": "src/task_suites/odysseys/000-core.json",
+          "in_annotation": true
+        },
+        {
+          "task_id": "36ba9459787fc18f62c6914cebc19d5dc91fe3f4",
+          "title": "36ba9459787f",
+          "title_zh": "在南加州找一套 100 万美元以下的房子并预约看房",
+          "suite": "real",
+          "tag": "real",
+          "domain": "Zilloft (Zillow)",
+          "domain_zh": "找房 Zilloft（Zillow）",
+          "folder": "scenarios/lifestyle/tasks/real--36ba9459787fc18f62c6914cebc19d5dc91fe3f4",
+          "task_file": "src/task_suites/real/000-core.json",
+          "in_annotation": true
+        }
+      ]
+    },
+    "productivity": {
+      "label": "效率",
+      "focus": "邮件收件箱和日历日程",
+      "domains": [
+        {
+          "id": "GoMail (Gmail)",
+          "label": "邮件 GoMail（Gmail）"
+        },
+        {
+          "id": "GoCalendar (Google Calendar)",
+          "label": "日历 GoCalendar（Google 日历）"
+        }
+      ],
+      "principle": "邮件收件箱和日历日程。domain 是邮件 GoMail（Gmail）、日历 GoCalendar（Google 日历）的任务归到这个场景。",
+      "persona_files": [
+        "scenarios/productivity/personas/productivity-expert.yaml",
+        "scenarios/productivity/personas/productivity-senior.yaml",
+        "scenarios/productivity/personas/productivity-young.yaml",
+        "scenarios/productivity/personas/productivity-practical.yaml"
+      ],
+      "tasks": [
+        {
+          "task_id": "44d29d36275c65f1663b909b0a46e9a81e39e675",
+          "title": "44d29d36275c",
+          "title_zh": "给 Barbara Thomas 写一封关于项目计划的邮件",
+          "suite": "real",
+          "tag": "real",
+          "domain": "GoMail (Gmail)",
+          "domain_zh": "邮件 GoMail（Gmail）",
+          "folder": "scenarios/productivity/tasks/real--44d29d36275c65f1663b909b0a46e9a81e39e675",
+          "task_file": "src/task_suites/real/000-core.json",
+          "in_annotation": true
+        },
+        {
+          "task_id": "7ef23d555c843be90276866c577c29960ca72ec7",
+          "title": "7ef23d555c84",
+          "title_zh": "删掉周三日历上的项目同步",
+          "suite": "real",
+          "tag": "real",
+          "domain": "GoCalendar (Google Calendar)",
+          "domain_zh": "日历 GoCalendar（Google 日历）",
+          "folder": "scenarios/productivity/tasks/real--7ef23d555c843be90276866c577c29960ca72ec7",
+          "task_file": "src/task_suites/real/000-core.json",
+          "in_annotation": true
+        }
+      ]
+    },
+    "professional": {
+      "label": "职业",
+      "focus": "找工作、招聘、人脉、自由职业平台",
+      "domains": [
+        {
+          "id": "NetworkIn (LinkedIn)",
+          "label": "职业社交 NetworkIn（LinkedIn）"
+        },
+        {
+          "id": "TopWork (Upwork)",
+          "label": "接单 TopWork（Upwork）"
+        }
+      ],
+      "principle": "找工作、招聘、人脉、自由职业平台。domain 是职业社交 NetworkIn（LinkedIn）、接单 TopWork（Upwork）的任务归到这个场景。",
+      "persona_files": [
+        "scenarios/professional/personas/professional-expert.yaml",
+        "scenarios/professional/personas/professional-senior.yaml",
+        "scenarios/professional/personas/professional-young.yaml",
+        "scenarios/professional/personas/professional-practical.yaml"
+      ],
+      "tasks": [
+        {
+          "task_id": "4b2245ba1a44a89e6a584c06cc267f08d850ff3c",
+          "title": "4b2245ba1a44",
+          "title_zh": "和三个新的人建立联系",
+          "suite": "real",
+          "tag": "real",
+          "domain": "NetworkIn (LinkedIn)",
+          "domain_zh": "职业社交 NetworkIn（LinkedIn）",
+          "folder": "scenarios/professional/tasks/real--4b2245ba1a44a89e6a584c06cc267f08d850ff3c",
+          "task_file": "src/task_suites/real/000-core.json",
+          "in_annotation": true
+        },
+        {
+          "task_id": "d0ed06e50dabe8aba500009e0075e057cdf042d2",
+          "title": "d0ed06e50dab",
+          "title_zh": "发布一个金融分析师职位",
+          "suite": "real",
+          "tag": "real",
+          "domain": "TopWork (Upwork)",
+          "domain_zh": "接单 TopWork（Upwork）",
+          "folder": "scenarios/professional/tasks/real--d0ed06e50dabe8aba500009e0075e057cdf042d2",
+          "task_file": "src/task_suites/real/000-core.json",
+          "in_annotation": true
+        }
+      ]
+    },
+    "science": {
+      "label": "科学",
+      "focus": "学习辅导、学位项目、研究方法、教学材料",
+      "domains": [
+        {
+          "id": "Science",
+          "label": "科学"
+        }
+      ],
+      "principle": "学习辅导、学位项目、研究方法、教学材料。domain 是科学的任务归到这个场景。",
+      "persona_files": [
+        "scenarios/science/personas/science-expert.yaml",
+        "scenarios/science/personas/science-senior.yaml",
+        "scenarios/science/personas/science-young.yaml",
+        "scenarios/science/personas/science-practical.yaml"
+      ],
+      "tasks": [
+        {
+          "task_id": "8c30f2f9ceeac75b05c725c5397022bb4f9d32a0",
+          "title": "Beginner AI explainer (IBM → product → hardware)",
+          "title_zh": "给初学者的人工智能说明：从 IBM 到硬件",
+          "suite": "odysseys",
+          "tag": "odysseys",
+          "domain": "Science",
+          "domain_zh": "科学",
+          "folder": "scenarios/science/tasks/odysseys--8c30f2f9ceeac75b05c725c5397022bb4f9d32a0",
+          "task_file": "src/task_suites/odysseys/000-core.json",
+          "in_annotation": true
+        },
+        {
+          "task_id": "e15345ed27f1933065af403601876e5f6597a943",
+          "title": "Reading-support mini lesson (5th grade)",
+          "title_zh": "五年级阅读辅助小课",
+          "suite": "odysseys",
+          "tag": "odysseys",
+          "domain": "Science",
+          "domain_zh": "科学",
+          "folder": "scenarios/science/tasks/odysseys--e15345ed27f1933065af403601876e5f6597a943",
+          "task_file": "src/task_suites/odysseys/000-core.json",
+          "in_annotation": true
+        }
+      ]
+    },
+    "tech": {
+      "label": "科技",
+      "focus": "消费硬件、软件排错、订阅、使用能力",
+      "domains": [
+        {
+          "id": "Tech",
+          "label": "科技"
+        }
+      ],
+      "principle": "消费硬件、软件排错、订阅、使用能力。domain 是科技的任务归到这个场景。",
+      "persona_files": [
+        "scenarios/tech/personas/tech-expert.yaml",
+        "scenarios/tech/personas/tech-senior.yaml",
+        "scenarios/tech/personas/tech-young.yaml",
+        "scenarios/tech/personas/tech-practical.yaml"
+      ],
+      "tasks": [
+        {
+          "task_id": "10548585c3214aa1a15f7ceef8aa4fde0c2fcdf7",
+          "title": "Chromebook help notes (Firefox, Apple passwords)",
+          "title_zh": "Chromebook 笔记：Firefox 和 Apple 密码",
+          "suite": "odysseys",
+          "tag": "odysseys",
+          "domain": "Tech",
+          "domain_zh": "科技",
+          "folder": "scenarios/tech/tasks/odysseys--10548585c3214aa1a15f7ceef8aa4fde0c2fcdf7",
+          "task_file": "src/task_suites/odysseys/000-core.json",
+          "in_annotation": true
+        },
+        {
+          "task_id": "fbcfa176b2e1aa42200d4f3adb66dcf0a6ca62ee",
+          "title": "Small subscription budget: Patreon vs ChatGPT",
+          "title_zh": "很小的订阅预算：Patreon 和 ChatGPT",
+          "suite": "odysseys",
+          "tag": "odysseys",
+          "domain": "Tech",
+          "domain_zh": "科技",
+          "folder": "scenarios/tech/tasks/odysseys--fbcfa176b2e1aa42200d4f3adb66dcf0a6ca62ee",
+          "task_file": "src/task_suites/odysseys/000-core.json",
+          "in_annotation": true
+        }
+      ]
+    },
+    "travel": {
+      "label": "出行",
+      "focus": "航班、住宿、打车、行程",
+      "domains": [
+        {
+          "id": "Travel",
+          "label": "出行"
+        },
+        {
+          "id": "Staynb (Airbnb)",
+          "label": "住宿 Staynb（Airbnb）"
+        },
+        {
+          "id": "Udriver (Uber)",
+          "label": "打车 Udriver（Uber）"
+        },
+        {
+          "id": "FlyUnified (United Airlines)",
+          "label": "机票 FlyUnified（美联航）"
+        }
+      ],
+      "principle": "航班、住宿、打车、行程。domain 是出行、住宿 Staynb（Airbnb）、打车 Udriver（Uber）、机票 FlyUnified（美联航）的任务归到这个场景。",
+      "persona_files": [
+        "scenarios/travel/personas/travel-expert.yaml",
+        "scenarios/travel/personas/travel-senior.yaml",
+        "scenarios/travel/personas/travel-young.yaml",
+        "scenarios/travel/personas/travel-practical.yaml"
+      ],
+      "tasks": [
+        {
+          "task_id": "890a6880049a42684ac91a2e1809442846f9394c",
+          "title": "Chicago → Aurora transit outing",
+          "title_zh": "从芝加哥坐公共交通去奥罗拉",
+          "suite": "odysseys",
+          "tag": "odysseys",
+          "domain": "Travel",
+          "domain_zh": "出行",
+          "folder": "scenarios/travel/tasks/odysseys--890a6880049a42684ac91a2e1809442846f9394c",
+          "task_file": "src/task_suites/odysseys/000-core.json",
+          "in_annotation": true
+        },
+        {
+          "task_id": "1a625276b600a49df9521941df46cac8862790b9",
+          "title": "1a625276b600",
+          "title_zh": "从 388 Beale 叫一辆 XL 去 Amber Indian",
+          "suite": "real",
+          "tag": "real",
+          "domain": "Udriver (Uber)",
+          "domain_zh": "打车 Udriver（Uber）",
+          "folder": "scenarios/travel/tasks/real--1a625276b600a49df9521941df46cac8862790b9",
+          "task_file": "src/task_suites/real/000-core.json",
+          "in_annotation": true
+        }
+      ]
+    }
+  }
+}

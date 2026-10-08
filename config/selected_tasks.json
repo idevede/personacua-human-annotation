@@ -1,0 +1,191 @@
+{
+  "schema_version": "personacua.annotation-selection.v1",
+  "selection_id": "personacua-22-tasks-v1",
+  "description": "Fixed 22-task human-annotation subset: two tasks from each of the 11 PersonaCUA persona families.",
+  "persona_roles": [
+    "expert",
+    "practical",
+    "senior",
+    "young",
+    "none"
+  ],
+  "model_slot_seed": "personacua-human-annotation-v1",
+  "tasks": [
+    {
+      "task_id": "80257c727b8e8c5426c1b03a2a4493231747e5d7",
+      "suite": "odysseys",
+      "tag": "odysseys",
+      "scenario": "art",
+      "title": "Pieces for a small React art prototype",
+      "rationale": "Representative multi-site visual research task with a clear model gap and non-zero results from both models."
+    },
+    {
+      "task_id": "3868f9b52e96067b4f55834a3b110e1228b48e65",
+      "suite": "odysseys",
+      "tag": "odysseys",
+      "scenario": "art",
+      "title": "Entry path into LA post-production IT",
+      "rationale": "A higher-performing career-and-media research task where Muse leads on the four persona cells, balancing the direction of comparison."
+    },
+    {
+      "task_id": "2cb0ed2a5df6053c6c982a5c5d436d25e006370f",
+      "suite": "odysseys",
+      "tag": "odysseys",
+      "scenario": "community",
+      "title": "Baltimore event night from official pages",
+      "rationale": "High-quality official-source browsing trace with a measurable model difference and no all-zero persona cells."
+    },
+    {
+      "task_id": "140960bb7293bdeeb6bcc60931681cb9b815351b",
+      "suite": "odysseys",
+      "tag": "odysseys",
+      "scenario": "community",
+      "title": "Little free pantries around Chapel Hill",
+      "rationale": "Representative local-community errand task with multiple map or listing pages, moderate difficulty, and useful partial-credit decisions."
+    },
+    {
+      "task_id": "63d68bb25e279fc22e6e3592d8ca59add33b6eb1",
+      "suite": "odysseys",
+      "tag": "odysseys",
+      "scenario": "ecommerce",
+      "title": "Family car under $50k near Minneapolis",
+      "rationale": "Difficult product-search task with a large Grok-over-Muse gap and several partial or failed traces to annotate."
+    },
+    {
+      "task_id": "44f1e02116715d5fe313996811b358fe25bc3ee4",
+      "suite": "odysseys",
+      "tag": "odysseys",
+      "scenario": "ecommerce",
+      "title": "Accessory shortlist for the household's cars",
+      "rationale": "Counterexample where Muse performs better on average, reducing one-sided model comparisons."
+    },
+    {
+      "task_id": "082aa17f3e88c3ce10796244e3677c5643dd19c9",
+      "suite": "odysseys",
+      "tag": "odysseys",
+      "scenario": "food",
+      "title": "Roasted Brussels sprouts recipe and kitchen setup",
+      "rationale": "Representative open-web food research task with several independently scorable rubrics and complete traces."
+    },
+    {
+      "task_id": "4fa0f20b6ff73e4a86442a1f0dc16ca4ab03582d",
+      "suite": "real",
+      "tag": "real",
+      "scenario": "food",
+      "title": "Book a business dinner in Haight-Ashbury",
+      "rationale": "REAL restaurant-booking task with a large model gap; pairs a transactional task with the Odysseys food task."
+    },
+    {
+      "task_id": "69782bfcfdb3311496bc9048bf66915b33e692cd",
+      "suite": "odysseys",
+      "tag": "odysseys",
+      "scenario": "health",
+      "title": "Compare Pilates studios in Clovis",
+      "rationale": "Fitness-oriented health task with strong but non-identical model performance, clear schedules and prices, and complete traces."
+    },
+    {
+      "task_id": "256342f13c0a03e080f92ee073153fe33a6881c0",
+      "suite": "odysseys",
+      "tag": "odysseys",
+      "scenario": "health",
+      "title": "NYC knee-surgeon shortlist for ACL or meniscus care",
+      "rationale": "Health task where Muse performs better on average, useful for testing annotator sensitivity to genuine reverse-direction cases."
+    },
+    {
+      "task_id": "d8fe04d1cf29251d68382cde58f4424e80bad07c",
+      "suite": "odysseys",
+      "tag": "odysseys",
+      "scenario": "lifestyle",
+      "title": "Private shared-journaling setup and AI access",
+      "rationale": "Privacy-focused open-web comparison with multiple evidence rubrics and a sizable model gap."
+    },
+    {
+      "task_id": "36ba9459787fc18f62c6914cebc19d5dc91fe3f4",
+      "suite": "real",
+      "tag": "real",
+      "scenario": "lifestyle",
+      "title": "Find a Southern California home and book a tour",
+      "rationale": "REAL housing transaction task with non-zero outcomes and mixed persona success; gives this scenario both suites."
+    },
+    {
+      "task_id": "44d29d36275c65f1663b909b0a46e9a81e39e675",
+      "suite": "real",
+      "tag": "real",
+      "scenario": "productivity",
+      "title": "Write Barbara Thomas an email about the project plan",
+      "rationale": "Short transactional email task with a modest model difference and clear state-based rubric."
+    },
+    {
+      "task_id": "7ef23d555c843be90276866c577c29960ca72ec7",
+      "suite": "real",
+      "tag": "real",
+      "scenario": "productivity",
+      "title": "Delete Wednesday's project sync from the calendar",
+      "rationale": "Both models succeed across personas, providing a positive agreement and annotation-calibration task."
+    },
+    {
+      "task_id": "d0ed06e50dabe8aba500009e0075e057cdf042d2",
+      "suite": "real",
+      "tag": "real",
+      "scenario": "professional",
+      "title": "Create a Financial Analyst job opening",
+      "rationale": "Representative form-heavy TopWork task with a large model gap and clear completion state."
+    },
+    {
+      "task_id": "4b2245ba1a44a89e6a584c06cc267f08d850ff3c",
+      "suite": "real",
+      "tag": "real",
+      "scenario": "professional",
+      "title": "Connect with three new people",
+      "rationale": "NetworkIn task where Muse performs better on average, covering a second professional application and reverse-direction outcome."
+    },
+    {
+      "task_id": "e15345ed27f1933065af403601876e5f6597a943",
+      "suite": "odysseys",
+      "tag": "odysseys",
+      "scenario": "science",
+      "title": "Reading-support mini lesson for fifth grade",
+      "rationale": "Multi-source education task with a large model gap and useful partial-rubric variation."
+    },
+    {
+      "task_id": "8c30f2f9ceeac75b05c725c5397022bb4f9d32a0",
+      "suite": "odysseys",
+      "tag": "odysseys",
+      "scenario": "science",
+      "title": "Beginner AI explainer from IBM to hardware",
+      "rationale": "Matched high-performing task that serves as an agreement anchor and broadens subject matter."
+    },
+    {
+      "task_id": "fbcfa176b2e1aa42200d4f3adb66dcf0a6ca62ee",
+      "suite": "odysseys",
+      "tag": "odysseys",
+      "scenario": "tech",
+      "title": "Small subscription budget: Patreon versus ChatGPT",
+      "rationale": "High-performing technology comparison with a consistent Grok advantage and several observable evidence steps."
+    },
+    {
+      "task_id": "10548585c3214aa1a15f7ceef8aa4fde0c2fcdf7",
+      "suite": "odysseys",
+      "tag": "odysseys",
+      "scenario": "tech",
+      "title": "Chromebook notes for Firefox and Apple passwords",
+      "rationale": "Technology task where Muse performs better, balancing direction of disagreement within the scenario."
+    },
+    {
+      "task_id": "890a6880049a42684ac91a2e1809442846f9394c",
+      "suite": "odysseys",
+      "tag": "odysseys",
+      "scenario": "travel",
+      "title": "Chicago to Aurora transit outing",
+      "rationale": "Representative transit-and-weather planning task where both models achieve substantial partial credit with concise complete traces."
+    },
+    {
+      "task_id": "1a625276b600a49df9521941df46cac8862790b9",
+      "suite": "real",
+      "tag": "real",
+      "scenario": "travel",
+      "title": "Book an XL ride from 388 Beale to Amber Indian",
+      "rationale": "REAL ride-booking task where Muse leads strongly, balancing model direction while giving travel one task from each suite."
+    }
+  ]
+}

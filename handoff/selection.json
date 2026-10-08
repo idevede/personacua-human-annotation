@@ -1,0 +1,1182 @@
+{
+  "selection_id": "personacua-22-tasks-v1",
+  "description": "22 tasks x 5 personas = 110 annotation cells, including the none control. Extract every included model for every cell.",
+  "persona_roles": [
+    "expert",
+    "practical",
+    "senior",
+    "young",
+    "none"
+  ],
+  "cells_per_model": 110,
+  "tasks": [
+    {
+      "task_id": "80257c727b8e8c5426c1b03a2a4493231747e5d7",
+      "tag": "odysseys",
+      "scenario": "art",
+      "title": "Pieces for a small React art prototype",
+      "personas": [
+        "art-expert",
+        "art-practical",
+        "art-senior",
+        "art-young",
+        "none"
+      ]
+    },
+    {
+      "task_id": "3868f9b52e96067b4f55834a3b110e1228b48e65",
+      "tag": "odysseys",
+      "scenario": "art",
+      "title": "Entry path into LA post-production IT",
+      "personas": [
+        "art-expert",
+        "art-practical",
+        "art-senior",
+        "art-young",
+        "none"
+      ]
+    },
+    {
+      "task_id": "2cb0ed2a5df6053c6c982a5c5d436d25e006370f",
+      "tag": "odysseys",
+      "scenario": "community",
+      "title": "Baltimore event night from official pages",
+      "personas": [
+        "community-expert",
+        "community-practical",
+        "community-senior",
+        "community-young",
+        "none"
+      ]
+    },
+    {
+      "task_id": "140960bb7293bdeeb6bcc60931681cb9b815351b",
+      "tag": "odysseys",
+      "scenario": "community",
+      "title": "Little free pantries around Chapel Hill",
+      "personas": [
+        "community-expert",
+        "community-practical",
+        "community-senior",
+        "community-young",
+        "none"
+      ]
+    },
+    {
+      "task_id": "63d68bb25e279fc22e6e3592d8ca59add33b6eb1",
+      "tag": "odysseys",
+      "scenario": "ecommerce",
+      "title": "Family car under $50k near Minneapolis",
+      "personas": [
+        "ecommerce-expert",
+        "ecommerce-practical",
+        "ecommerce-senior",
+        "ecommerce-young",
+        "none"
+      ]
+    },
+    {
+      "task_id": "44f1e02116715d5fe313996811b358fe25bc3ee4",
+      "tag": "odysseys",
+      "scenario": "ecommerce",
+      "title": "Accessory shortlist for the household's cars",
+      "personas": [
+        "ecommerce-expert",
+        "ecommerce-practical",
+        "ecommerce-senior",
+        "ecommerce-young",
+        "none"
+      ]
+    },
+    {
+      "task_id": "082aa17f3e88c3ce10796244e3677c5643dd19c9",
+      "tag": "odysseys",
+      "scenario": "food",
+      "title": "Roasted Brussels sprouts recipe and kitchen setup",
+      "personas": [
+        "food-expert",
+        "food-practical",
+        "food-senior",
+        "food-young",
+        "none"
+      ]
+    },
+    {
+      "task_id": "4fa0f20b6ff73e4a86442a1f0dc16ca4ab03582d",
+      "tag": "real",
+      "scenario": "food",
+      "title": "Book a business dinner in Haight-Ashbury",
+      "personas": [
+        "food-expert",
+        "food-practical",
+        "food-senior",
+        "food-young",
+        "none"
+      ]
+    },
+    {
+      "task_id": "69782bfcfdb3311496bc9048bf66915b33e692cd",
+      "tag": "odysseys",
+      "scenario": "health",
+      "title": "Compare Pilates studios in Clovis",
+      "personas": [
+        "health-expert",
+        "health-practical",
+        "health-senior",
+        "health-young",
+        "none"
+      ]
+    },
+    {
+      "task_id": "256342f13c0a03e080f92ee073153fe33a6881c0",
+      "tag": "odysseys",
+      "scenario": "health",
+      "title": "NYC knee-surgeon shortlist for ACL or meniscus care",
+      "personas": [
+        "health-expert",
+        "health-practical",
+        "health-senior",
+        "health-young",
+        "none"
+      ]
+    },
+    {
+      "task_id": "d8fe04d1cf29251d68382cde58f4424e80bad07c",
+      "tag": "odysseys",
+      "scenario": "lifestyle",
+      "title": "Private shared-journaling setup and AI access",
+      "personas": [
+        "lifestyle-expert",
+        "lifestyle-practical",
+        "lifestyle-senior",
+        "lifestyle-young",
+        "none"
+      ]
+    },
+    {
+      "task_id": "36ba9459787fc18f62c6914cebc19d5dc91fe3f4",
+      "tag": "real",
+      "scenario": "lifestyle",
+      "title": "Find a Southern California home and book a tour",
+      "personas": [
+        "lifestyle-expert",
+        "lifestyle-practical",
+        "lifestyle-senior",
+        "lifestyle-young",
+        "none"
+      ]
+    },
+    {
+      "task_id": "44d29d36275c65f1663b909b0a46e9a81e39e675",
+      "tag": "real",
+      "scenario": "productivity",
+      "title": "Write Barbara Thomas an email about the project plan",
+      "personas": [
+        "productivity-expert",
+        "productivity-practical",
+        "productivity-senior",
+        "productivity-young",
+        "none"
+      ]
+    },
+    {
+      "task_id": "7ef23d555c843be90276866c577c29960ca72ec7",
+      "tag": "real",
+      "scenario": "productivity",
+      "title": "Delete Wednesday's project sync from the calendar",
+      "personas": [
+        "productivity-expert",
+        "productivity-practical",
+        "productivity-senior",
+        "productivity-young",
+        "none"
+      ]
+    },
+    {
+      "task_id": "d0ed06e50dabe8aba500009e0075e057cdf042d2",
+      "tag": "real",
+      "scenario": "professional",
+      "title": "Create a Financial Analyst job opening",
+      "personas": [
+        "professional-expert",
+        "professional-practical",
+        "professional-senior",
+        "professional-young",
+        "none"
+      ]
+    },
+    {
+      "task_id": "4b2245ba1a44a89e6a584c06cc267f08d850ff3c",
+      "tag": "real",
+      "scenario": "professional",
+      "title": "Connect with three new people",
+      "personas": [
+        "professional-expert",
+        "professional-practical",
+        "professional-senior",
+        "professional-young",
+        "none"
+      ]
+    },
+    {
+      "task_id": "e15345ed27f1933065af403601876e5f6597a943",
+      "tag": "odysseys",
+      "scenario": "science",
+      "title": "Reading-support mini lesson for fifth grade",
+      "personas": [
+        "science-expert",
+        "science-practical",
+        "science-senior",
+        "science-young",
+        "none"
+      ]
+    },
+    {
+      "task_id": "8c30f2f9ceeac75b05c725c5397022bb4f9d32a0",
+      "tag": "odysseys",
+      "scenario": "science",
+      "title": "Beginner AI explainer from IBM to hardware",
+      "personas": [
+        "science-expert",
+        "science-practical",
+        "science-senior",
+        "science-young",
+        "none"
+      ]
+    },
+    {
+      "task_id": "fbcfa176b2e1aa42200d4f3adb66dcf0a6ca62ee",
+      "tag": "odysseys",
+      "scenario": "tech",
+      "title": "Small subscription budget: Patreon versus ChatGPT",
+      "personas": [
+        "tech-expert",
+        "tech-practical",
+        "tech-senior",
+        "tech-young",
+        "none"
+      ]
+    },
+    {
+      "task_id": "10548585c3214aa1a15f7ceef8aa4fde0c2fcdf7",
+      "tag": "odysseys",
+      "scenario": "tech",
+      "title": "Chromebook notes for Firefox and Apple passwords",
+      "personas": [
+        "tech-expert",
+        "tech-practical",
+        "tech-senior",
+        "tech-young",
+        "none"
+      ]
+    },
+    {
+      "task_id": "890a6880049a42684ac91a2e1809442846f9394c",
+      "tag": "odysseys",
+      "scenario": "travel",
+      "title": "Chicago to Aurora transit outing",
+      "personas": [
+        "travel-expert",
+        "travel-practical",
+        "travel-senior",
+        "travel-young",
+        "none"
+      ]
+    },
+    {
+      "task_id": "1a625276b600a49df9521941df46cac8862790b9",
+      "tag": "real",
+      "scenario": "travel",
+      "title": "Book an XL ride from 388 Beale to Amber Indian",
+      "personas": [
+        "travel-expert",
+        "travel-practical",
+        "travel-senior",
+        "travel-young",
+        "none"
+      ]
+    }
+  ],
+  "cells": [
+    {
+      "task_id": "80257c727b8e8c5426c1b03a2a4493231747e5d7",
+      "tag": "odysseys",
+      "scenario": "art",
+      "role": "expert",
+      "persona": "art-expert",
+      "title": "Pieces for a small React art prototype"
+    },
+    {
+      "task_id": "80257c727b8e8c5426c1b03a2a4493231747e5d7",
+      "tag": "odysseys",
+      "scenario": "art",
+      "role": "practical",
+      "persona": "art-practical",
+      "title": "Pieces for a small React art prototype"
+    },
+    {
+      "task_id": "80257c727b8e8c5426c1b03a2a4493231747e5d7",
+      "tag": "odysseys",
+      "scenario": "art",
+      "role": "senior",
+      "persona": "art-senior",
+      "title": "Pieces for a small React art prototype"
+    },
+    {
+      "task_id": "80257c727b8e8c5426c1b03a2a4493231747e5d7",
+      "tag": "odysseys",
+      "scenario": "art",
+      "role": "young",
+      "persona": "art-young",
+      "title": "Pieces for a small React art prototype"
+    },
+    {
+      "task_id": "80257c727b8e8c5426c1b03a2a4493231747e5d7",
+      "tag": "odysseys",
+      "scenario": "art",
+      "role": "none",
+      "persona": "none",
+      "title": "Pieces for a small React art prototype"
+    },
+    {
+      "task_id": "3868f9b52e96067b4f55834a3b110e1228b48e65",
+      "tag": "odysseys",
+      "scenario": "art",
+      "role": "expert",
+      "persona": "art-expert",
+      "title": "Entry path into LA post-production IT"
+    },
+    {
+      "task_id": "3868f9b52e96067b4f55834a3b110e1228b48e65",
+      "tag": "odysseys",
+      "scenario": "art",
+      "role": "practical",
+      "persona": "art-practical",
+      "title": "Entry path into LA post-production IT"
+    },
+    {
+      "task_id": "3868f9b52e96067b4f55834a3b110e1228b48e65",
+      "tag": "odysseys",
+      "scenario": "art",
+      "role": "senior",
+      "persona": "art-senior",
+      "title": "Entry path into LA post-production IT"
+    },
+    {
+      "task_id": "3868f9b52e96067b4f55834a3b110e1228b48e65",
+      "tag": "odysseys",
+      "scenario": "art",
+      "role": "young",
+      "persona": "art-young",
+      "title": "Entry path into LA post-production IT"
+    },
+    {
+      "task_id": "3868f9b52e96067b4f55834a3b110e1228b48e65",
+      "tag": "odysseys",
+      "scenario": "art",
+      "role": "none",
+      "persona": "none",
+      "title": "Entry path into LA post-production IT"
+    },
+    {
+      "task_id": "2cb0ed2a5df6053c6c982a5c5d436d25e006370f",
+      "tag": "odysseys",
+      "scenario": "community",
+      "role": "expert",
+      "persona": "community-expert",
+      "title": "Baltimore event night from official pages"
+    },
+    {
+      "task_id": "2cb0ed2a5df6053c6c982a5c5d436d25e006370f",
+      "tag": "odysseys",
+      "scenario": "community",
+      "role": "practical",
+      "persona": "community-practical",
+      "title": "Baltimore event night from official pages"
+    },
+    {
+      "task_id": "2cb0ed2a5df6053c6c982a5c5d436d25e006370f",
+      "tag": "odysseys",
+      "scenario": "community",
+      "role": "senior",
+      "persona": "community-senior",
+      "title": "Baltimore event night from official pages"
+    },
+    {
+      "task_id": "2cb0ed2a5df6053c6c982a5c5d436d25e006370f",
+      "tag": "odysseys",
+      "scenario": "community",
+      "role": "young",
+      "persona": "community-young",
+      "title": "Baltimore event night from official pages"
+    },
+    {
+      "task_id": "2cb0ed2a5df6053c6c982a5c5d436d25e006370f",
+      "tag": "odysseys",
+      "scenario": "community",
+      "role": "none",
+      "persona": "none",
+      "title": "Baltimore event night from official pages"
+    },
+    {
+      "task_id": "140960bb7293bdeeb6bcc60931681cb9b815351b",
+      "tag": "odysseys",
+      "scenario": "community",
+      "role": "expert",
+      "persona": "community-expert",
+      "title": "Little free pantries around Chapel Hill"
+    },
+    {
+      "task_id": "140960bb7293bdeeb6bcc60931681cb9b815351b",
+      "tag": "odysseys",
+      "scenario": "community",
+      "role": "practical",
+      "persona": "community-practical",
+      "title": "Little free pantries around Chapel Hill"
+    },
+    {
+      "task_id": "140960bb7293bdeeb6bcc60931681cb9b815351b",
+      "tag": "odysseys",
+      "scenario": "community",
+      "role": "senior",
+      "persona": "community-senior",
+      "title": "Little free pantries around Chapel Hill"
+    },
+    {
+      "task_id": "140960bb7293bdeeb6bcc60931681cb9b815351b",
+      "tag": "odysseys",
+      "scenario": "community",
+      "role": "young",
+      "persona": "community-young",
+      "title": "Little free pantries around Chapel Hill"
+    },
+    {
+      "task_id": "140960bb7293bdeeb6bcc60931681cb9b815351b",
+      "tag": "odysseys",
+      "scenario": "community",
+      "role": "none",
+      "persona": "none",
+      "title": "Little free pantries around Chapel Hill"
+    },
+    {
+      "task_id": "63d68bb25e279fc22e6e3592d8ca59add33b6eb1",
+      "tag": "odysseys",
+      "scenario": "ecommerce",
+      "role": "expert",
+      "persona": "ecommerce-expert",
+      "title": "Family car under $50k near Minneapolis"
+    },
+    {
+      "task_id": "63d68bb25e279fc22e6e3592d8ca59add33b6eb1",
+      "tag": "odysseys",
+      "scenario": "ecommerce",
+      "role": "practical",
+      "persona": "ecommerce-practical",
+      "title": "Family car under $50k near Minneapolis"
+    },
+    {
+      "task_id": "63d68bb25e279fc22e6e3592d8ca59add33b6eb1",
+      "tag": "odysseys",
+      "scenario": "ecommerce",
+      "role": "senior",
+      "persona": "ecommerce-senior",
+      "title": "Family car under $50k near Minneapolis"
+    },
+    {
+      "task_id": "63d68bb25e279fc22e6e3592d8ca59add33b6eb1",
+      "tag": "odysseys",
+      "scenario": "ecommerce",
+      "role": "young",
+      "persona": "ecommerce-young",
+      "title": "Family car under $50k near Minneapolis"
+    },
+    {
+      "task_id": "63d68bb25e279fc22e6e3592d8ca59add33b6eb1",
+      "tag": "odysseys",
+      "scenario": "ecommerce",
+      "role": "none",
+      "persona": "none",
+      "title": "Family car under $50k near Minneapolis"
+    },
+    {
+      "task_id": "44f1e02116715d5fe313996811b358fe25bc3ee4",
+      "tag": "odysseys",
+      "scenario": "ecommerce",
+      "role": "expert",
+      "persona": "ecommerce-expert",
+      "title": "Accessory shortlist for the household's cars"
+    },
+    {
+      "task_id": "44f1e02116715d5fe313996811b358fe25bc3ee4",
+      "tag": "odysseys",
+      "scenario": "ecommerce",
+      "role": "practical",
+      "persona": "ecommerce-practical",
+      "title": "Accessory shortlist for the household's cars"
+    },
+    {
+      "task_id": "44f1e02116715d5fe313996811b358fe25bc3ee4",
+      "tag": "odysseys",
+      "scenario": "ecommerce",
+      "role": "senior",
+      "persona": "ecommerce-senior",
+      "title": "Accessory shortlist for the household's cars"
+    },
+    {
+      "task_id": "44f1e02116715d5fe313996811b358fe25bc3ee4",
+      "tag": "odysseys",
+      "scenario": "ecommerce",
+      "role": "young",
+      "persona": "ecommerce-young",
+      "title": "Accessory shortlist for the household's cars"
+    },
+    {
+      "task_id": "44f1e02116715d5fe313996811b358fe25bc3ee4",
+      "tag": "odysseys",
+      "scenario": "ecommerce",
+      "role": "none",
+      "persona": "none",
+      "title": "Accessory shortlist for the household's cars"
+    },
+    {
+      "task_id": "082aa17f3e88c3ce10796244e3677c5643dd19c9",
+      "tag": "odysseys",
+      "scenario": "food",
+      "role": "expert",
+      "persona": "food-expert",
+      "title": "Roasted Brussels sprouts recipe and kitchen setup"
+    },
+    {
+      "task_id": "082aa17f3e88c3ce10796244e3677c5643dd19c9",
+      "tag": "odysseys",
+      "scenario": "food",
+      "role": "practical",
+      "persona": "food-practical",
+      "title": "Roasted Brussels sprouts recipe and kitchen setup"
+    },
+    {
+      "task_id": "082aa17f3e88c3ce10796244e3677c5643dd19c9",
+      "tag": "odysseys",
+      "scenario": "food",
+      "role": "senior",
+      "persona": "food-senior",
+      "title": "Roasted Brussels sprouts recipe and kitchen setup"
+    },
+    {
+      "task_id": "082aa17f3e88c3ce10796244e3677c5643dd19c9",
+      "tag": "odysseys",
+      "scenario": "food",
+      "role": "young",
+      "persona": "food-young",
+      "title": "Roasted Brussels sprouts recipe and kitchen setup"
+    },
+    {
+      "task_id": "082aa17f3e88c3ce10796244e3677c5643dd19c9",
+      "tag": "odysseys",
+      "scenario": "food",
+      "role": "none",
+      "persona": "none",
+      "title": "Roasted Brussels sprouts recipe and kitchen setup"
+    },
+    {
+      "task_id": "4fa0f20b6ff73e4a86442a1f0dc16ca4ab03582d",
+      "tag": "real",
+      "scenario": "food",
+      "role": "expert",
+      "persona": "food-expert",
+      "title": "Book a business dinner in Haight-Ashbury"
+    },
+    {
+      "task_id": "4fa0f20b6ff73e4a86442a1f0dc16ca4ab03582d",
+      "tag": "real",
+      "scenario": "food",
+      "role": "practical",
+      "persona": "food-practical",
+      "title": "Book a business dinner in Haight-Ashbury"
+    },
+    {
+      "task_id": "4fa0f20b6ff73e4a86442a1f0dc16ca4ab03582d",
+      "tag": "real",
+      "scenario": "food",
+      "role": "senior",
+      "persona": "food-senior",
+      "title": "Book a business dinner in Haight-Ashbury"
+    },
+    {
+      "task_id": "4fa0f20b6ff73e4a86442a1f0dc16ca4ab03582d",
+      "tag": "real",
+      "scenario": "food",
+      "role": "young",
+      "persona": "food-young",
+      "title": "Book a business dinner in Haight-Ashbury"
+    },
+    {
+      "task_id": "4fa0f20b6ff73e4a86442a1f0dc16ca4ab03582d",
+      "tag": "real",
+      "scenario": "food",
+      "role": "none",
+      "persona": "none",
+      "title": "Book a business dinner in Haight-Ashbury"
+    },
+    {
+      "task_id": "69782bfcfdb3311496bc9048bf66915b33e692cd",
+      "tag": "odysseys",
+      "scenario": "health",
+      "role": "expert",
+      "persona": "health-expert",
+      "title": "Compare Pilates studios in Clovis"
+    },
+    {
+      "task_id": "69782bfcfdb3311496bc9048bf66915b33e692cd",
+      "tag": "odysseys",
+      "scenario": "health",
+      "role": "practical",
+      "persona": "health-practical",
+      "title": "Compare Pilates studios in Clovis"
+    },
+    {
+      "task_id": "69782bfcfdb3311496bc9048bf66915b33e692cd",
+      "tag": "odysseys",
+      "scenario": "health",
+      "role": "senior",
+      "persona": "health-senior",
+      "title": "Compare Pilates studios in Clovis"
+    },
+    {
+      "task_id": "69782bfcfdb3311496bc9048bf66915b33e692cd",
+      "tag": "odysseys",
+      "scenario": "health",
+      "role": "young",
+      "persona": "health-young",
+      "title": "Compare Pilates studios in Clovis"
+    },
+    {
+      "task_id": "69782bfcfdb3311496bc9048bf66915b33e692cd",
+      "tag": "odysseys",
+      "scenario": "health",
+      "role": "none",
+      "persona": "none",
+      "title": "Compare Pilates studios in Clovis"
+    },
+    {
+      "task_id": "256342f13c0a03e080f92ee073153fe33a6881c0",
+      "tag": "odysseys",
+      "scenario": "health",
+      "role": "expert",
+      "persona": "health-expert",
+      "title": "NYC knee-surgeon shortlist for ACL or meniscus care"
+    },
+    {
+      "task_id": "256342f13c0a03e080f92ee073153fe33a6881c0",
+      "tag": "odysseys",
+      "scenario": "health",
+      "role": "practical",
+      "persona": "health-practical",
+      "title": "NYC knee-surgeon shortlist for ACL or meniscus care"
+    },
+    {
+      "task_id": "256342f13c0a03e080f92ee073153fe33a6881c0",
+      "tag": "odysseys",
+      "scenario": "health",
+      "role": "senior",
+      "persona": "health-senior",
+      "title": "NYC knee-surgeon shortlist for ACL or meniscus care"
+    },
+    {
+      "task_id": "256342f13c0a03e080f92ee073153fe33a6881c0",
+      "tag": "odysseys",
+      "scenario": "health",
+      "role": "young",
+      "persona": "health-young",
+      "title": "NYC knee-surgeon shortlist for ACL or meniscus care"
+    },
+    {
+      "task_id": "256342f13c0a03e080f92ee073153fe33a6881c0",
+      "tag": "odysseys",
+      "scenario": "health",
+      "role": "none",
+      "persona": "none",
+      "title": "NYC knee-surgeon shortlist for ACL or meniscus care"
+    },
+    {
+      "task_id": "d8fe04d1cf29251d68382cde58f4424e80bad07c",
+      "tag": "odysseys",
+      "scenario": "lifestyle",
+      "role": "expert",
+      "persona": "lifestyle-expert",
+      "title": "Private shared-journaling setup and AI access"
+    },
+    {
+      "task_id": "d8fe04d1cf29251d68382cde58f4424e80bad07c",
+      "tag": "odysseys",
+      "scenario": "lifestyle",
+      "role": "practical",
+      "persona": "lifestyle-practical",
+      "title": "Private shared-journaling setup and AI access"
+    },
+    {
+      "task_id": "d8fe04d1cf29251d68382cde58f4424e80bad07c",
+      "tag": "odysseys",
+      "scenario": "lifestyle",
+      "role": "senior",
+      "persona": "lifestyle-senior",
+      "title": "Private shared-journaling setup and AI access"
+    },
+    {
+      "task_id": "d8fe04d1cf29251d68382cde58f4424e80bad07c",
+      "tag": "odysseys",
+      "scenario": "lifestyle",
+      "role": "young",
+      "persona": "lifestyle-young",
+      "title": "Private shared-journaling setup and AI access"
+    },
+    {
+      "task_id": "d8fe04d1cf29251d68382cde58f4424e80bad07c",
+      "tag": "odysseys",
+      "scenario": "lifestyle",
+      "role": "none",
+      "persona": "none",
+      "title": "Private shared-journaling setup and AI access"
+    },
+    {
+      "task_id": "36ba9459787fc18f62c6914cebc19d5dc91fe3f4",
+      "tag": "real",
+      "scenario": "lifestyle",
+      "role": "expert",
+      "persona": "lifestyle-expert",
+      "title": "Find a Southern California home and book a tour"
+    },
+    {
+      "task_id": "36ba9459787fc18f62c6914cebc19d5dc91fe3f4",
+      "tag": "real",
+      "scenario": "lifestyle",
+      "role": "practical",
+      "persona": "lifestyle-practical",
+      "title": "Find a Southern California home and book a tour"
+    },
+    {
+      "task_id": "36ba9459787fc18f62c6914cebc19d5dc91fe3f4",
+      "tag": "real",
+      "scenario": "lifestyle",
+      "role": "senior",
+      "persona": "lifestyle-senior",
+      "title": "Find a Southern California home and book a tour"
+    },
+    {
+      "task_id": "36ba9459787fc18f62c6914cebc19d5dc91fe3f4",
+      "tag": "real",
+      "scenario": "lifestyle",
+      "role": "young",
+      "persona": "lifestyle-young",
+      "title": "Find a Southern California home and book a tour"
+    },
+    {
+      "task_id": "36ba9459787fc18f62c6914cebc19d5dc91fe3f4",
+      "tag": "real",
+      "scenario": "lifestyle",
+      "role": "none",
+      "persona": "none",
+      "title": "Find a Southern California home and book a tour"
+    },
+    {
+      "task_id": "44d29d36275c65f1663b909b0a46e9a81e39e675",
+      "tag": "real",
+      "scenario": "productivity",
+      "role": "expert",
+      "persona": "productivity-expert",
+      "title": "Write Barbara Thomas an email about the project plan"
+    },
+    {
+      "task_id": "44d29d36275c65f1663b909b0a46e9a81e39e675",
+      "tag": "real",
+      "scenario": "productivity",
+      "role": "practical",
+      "persona": "productivity-practical",
+      "title": "Write Barbara Thomas an email about the project plan"
+    },
+    {
+      "task_id": "44d29d36275c65f1663b909b0a46e9a81e39e675",
+      "tag": "real",
+      "scenario": "productivity",
+      "role": "senior",
+      "persona": "productivity-senior",
+      "title": "Write Barbara Thomas an email about the project plan"
+    },
+    {
+      "task_id": "44d29d36275c65f1663b909b0a46e9a81e39e675",
+      "tag": "real",
+      "scenario": "productivity",
+      "role": "young",
+      "persona": "productivity-young",
+      "title": "Write Barbara Thomas an email about the project plan"
+    },
+    {
+      "task_id": "44d29d36275c65f1663b909b0a46e9a81e39e675",
+      "tag": "real",
+      "scenario": "productivity",
+      "role": "none",
+      "persona": "none",
+      "title": "Write Barbara Thomas an email about the project plan"
+    },
+    {
+      "task_id": "7ef23d555c843be90276866c577c29960ca72ec7",
+      "tag": "real",
+      "scenario": "productivity",
+      "role": "expert",
+      "persona": "productivity-expert",
+      "title": "Delete Wednesday's project sync from the calendar"
+    },
+    {
+      "task_id": "7ef23d555c843be90276866c577c29960ca72ec7",
+      "tag": "real",
+      "scenario": "productivity",
+      "role": "practical",
+      "persona": "productivity-practical",
+      "title": "Delete Wednesday's project sync from the calendar"
+    },
+    {
+      "task_id": "7ef23d555c843be90276866c577c29960ca72ec7",
+      "tag": "real",
+      "scenario": "productivity",
+      "role": "senior",
+      "persona": "productivity-senior",
+      "title": "Delete Wednesday's project sync from the calendar"
+    },
+    {
+      "task_id": "7ef23d555c843be90276866c577c29960ca72ec7",
+      "tag": "real",
+      "scenario": "productivity",
+      "role": "young",
+      "persona": "productivity-young",
+      "title": "Delete Wednesday's project sync from the calendar"
+    },
+    {
+      "task_id": "7ef23d555c843be90276866c577c29960ca72ec7",
+      "tag": "real",
+      "scenario": "productivity",
+      "role": "none",
+      "persona": "none",
+      "title": "Delete Wednesday's project sync from the calendar"
+    },
+    {
+      "task_id": "d0ed06e50dabe8aba500009e0075e057cdf042d2",
+      "tag": "real",
+      "scenario": "professional",
+      "role": "expert",
+      "persona": "professional-expert",
+      "title": "Create a Financial Analyst job opening"
+    },
+    {
+      "task_id": "d0ed06e50dabe8aba500009e0075e057cdf042d2",
+      "tag": "real",
+      "scenario": "professional",
+      "role": "practical",
+      "persona": "professional-practical",
+      "title": "Create a Financial Analyst job opening"
+    },
+    {
+      "task_id": "d0ed06e50dabe8aba500009e0075e057cdf042d2",
+      "tag": "real",
+      "scenario": "professional",
+      "role": "senior",
+      "persona": "professional-senior",
+      "title": "Create a Financial Analyst job opening"
+    },
+    {
+      "task_id": "d0ed06e50dabe8aba500009e0075e057cdf042d2",
+      "tag": "real",
+      "scenario": "professional",
+      "role": "young",
+      "persona": "professional-young",
+      "title": "Create a Financial Analyst job opening"
+    },
+    {
+      "task_id": "d0ed06e50dabe8aba500009e0075e057cdf042d2",
+      "tag": "real",
+      "scenario": "professional",
+      "role": "none",
+      "persona": "none",
+      "title": "Create a Financial Analyst job opening"
+    },
+    {
+      "task_id": "4b2245ba1a44a89e6a584c06cc267f08d850ff3c",
+      "tag": "real",
+      "scenario": "professional",
+      "role": "expert",
+      "persona": "professional-expert",
+      "title": "Connect with three new people"
+    },
+    {
+      "task_id": "4b2245ba1a44a89e6a584c06cc267f08d850ff3c",
+      "tag": "real",
+      "scenario": "professional",
+      "role": "practical",
+      "persona": "professional-practical",
+      "title": "Connect with three new people"
+    },
+    {
+      "task_id": "4b2245ba1a44a89e6a584c06cc267f08d850ff3c",
+      "tag": "real",
+      "scenario": "professional",
+      "role": "senior",
+      "persona": "professional-senior",
+      "title": "Connect with three new people"
+    },
+    {
+      "task_id": "4b2245ba1a44a89e6a584c06cc267f08d850ff3c",
+      "tag": "real",
+      "scenario": "professional",
+      "role": "young",
+      "persona": "professional-young",
+      "title": "Connect with three new people"
+    },
+    {
+      "task_id": "4b2245ba1a44a89e6a584c06cc267f08d850ff3c",
+      "tag": "real",
+      "scenario": "professional",
+      "role": "none",
+      "persona": "none",
+      "title": "Connect with three new people"
+    },
+    {
+      "task_id": "e15345ed27f1933065af403601876e5f6597a943",
+      "tag": "odysseys",
+      "scenario": "science",
+      "role": "expert",
+      "persona": "science-expert",
+      "title": "Reading-support mini lesson for fifth grade"
+    },
+    {
+      "task_id": "e15345ed27f1933065af403601876e5f6597a943",
+      "tag": "odysseys",
+      "scenario": "science",
+      "role": "practical",
+      "persona": "science-practical",
+      "title": "Reading-support mini lesson for fifth grade"
+    },
+    {
+      "task_id": "e15345ed27f1933065af403601876e5f6597a943",
+      "tag": "odysseys",
+      "scenario": "science",
+      "role": "senior",
+      "persona": "science-senior",
+      "title": "Reading-support mini lesson for fifth grade"
+    },
+    {
+      "task_id": "e15345ed27f1933065af403601876e5f6597a943",
+      "tag": "odysseys",
+      "scenario": "science",
+      "role": "young",
+      "persona": "science-young",
+      "title": "Reading-support mini lesson for fifth grade"
+    },
+    {
+      "task_id": "e15345ed27f1933065af403601876e5f6597a943",
+      "tag": "odysseys",
+      "scenario": "science",
+      "role": "none",
+      "persona": "none",
+      "title": "Reading-support mini lesson for fifth grade"
+    },
+    {
+      "task_id": "8c30f2f9ceeac75b05c725c5397022bb4f9d32a0",
+      "tag": "odysseys",
+      "scenario": "science",
+      "role": "expert",
+      "persona": "science-expert",
+      "title": "Beginner AI explainer from IBM to hardware"
+    },
+    {
+      "task_id": "8c30f2f9ceeac75b05c725c5397022bb4f9d32a0",
+      "tag": "odysseys",
+      "scenario": "science",
+      "role": "practical",
+      "persona": "science-practical",
+      "title": "Beginner AI explainer from IBM to hardware"
+    },
+    {
+      "task_id": "8c30f2f9ceeac75b05c725c5397022bb4f9d32a0",
+      "tag": "odysseys",
+      "scenario": "science",
+      "role": "senior",
+      "persona": "science-senior",
+      "title": "Beginner AI explainer from IBM to hardware"
+    },
+    {
+      "task_id": "8c30f2f9ceeac75b05c725c5397022bb4f9d32a0",
+      "tag": "odysseys",
+      "scenario": "science",
+      "role": "young",
+      "persona": "science-young",
+      "title": "Beginner AI explainer from IBM to hardware"
+    },
+    {
+      "task_id": "8c30f2f9ceeac75b05c725c5397022bb4f9d32a0",
+      "tag": "odysseys",
+      "scenario": "science",
+      "role": "none",
+      "persona": "none",
+      "title": "Beginner AI explainer from IBM to hardware"
+    },
+    {
+      "task_id": "fbcfa176b2e1aa42200d4f3adb66dcf0a6ca62ee",
+      "tag": "odysseys",
+      "scenario": "tech",
+      "role": "expert",
+      "persona": "tech-expert",
+      "title": "Small subscription budget: Patreon versus ChatGPT"
+    },
+    {
+      "task_id": "fbcfa176b2e1aa42200d4f3adb66dcf0a6ca62ee",
+      "tag": "odysseys",
+      "scenario": "tech",
+      "role": "practical",
+      "persona": "tech-practical",
+      "title": "Small subscription budget: Patreon versus ChatGPT"
+    },
+    {
+      "task_id": "fbcfa176b2e1aa42200d4f3adb66dcf0a6ca62ee",
+      "tag": "odysseys",
+      "scenario": "tech",
+      "role": "senior",
+      "persona": "tech-senior",
+      "title": "Small subscription budget: Patreon versus ChatGPT"
+    },
+    {
+      "task_id": "fbcfa176b2e1aa42200d4f3adb66dcf0a6ca62ee",
+      "tag": "odysseys",
+      "scenario": "tech",
+      "role": "young",
+      "persona": "tech-young",
+      "title": "Small subscription budget: Patreon versus ChatGPT"
+    },
+    {
+      "task_id": "fbcfa176b2e1aa42200d4f3adb66dcf0a6ca62ee",
+      "tag": "odysseys",
+      "scenario": "tech",
+      "role": "none",
+      "persona": "none",
+      "title": "Small subscription budget: Patreon versus ChatGPT"
+    },
+    {
+      "task_id": "10548585c3214aa1a15f7ceef8aa4fde0c2fcdf7",
+      "tag": "odysseys",
+      "scenario": "tech",
+      "role": "expert",
+      "persona": "tech-expert",
+      "title": "Chromebook notes for Firefox and Apple passwords"
+    },
+    {
+      "task_id": "10548585c3214aa1a15f7ceef8aa4fde0c2fcdf7",
+      "tag": "odysseys",
+      "scenario": "tech",
+      "role": "practical",
+      "persona": "tech-practical",
+      "title": "Chromebook notes for Firefox and Apple passwords"
+    },
+    {
+      "task_id": "10548585c3214aa1a15f7ceef8aa4fde0c2fcdf7",
+      "tag": "odysseys",
+      "scenario": "tech",
+      "role": "senior",
+      "persona": "tech-senior",
+      "title": "Chromebook notes for Firefox and Apple passwords"
+    },
+    {
+      "task_id": "10548585c3214aa1a15f7ceef8aa4fde0c2fcdf7",
+      "tag": "odysseys",
+      "scenario": "tech",
+      "role": "young",
+      "persona": "tech-young",
+      "title": "Chromebook notes for Firefox and Apple passwords"
+    },
+    {
+      "task_id": "10548585c3214aa1a15f7ceef8aa4fde0c2fcdf7",
+      "tag": "odysseys",
+      "scenario": "tech",
+      "role": "none",
+      "persona": "none",
+      "title": "Chromebook notes for Firefox and Apple passwords"
+    },
+    {
+      "task_id": "890a6880049a42684ac91a2e1809442846f9394c",
+      "tag": "odysseys",
+      "scenario": "travel",
+      "role": "expert",
+      "persona": "travel-expert",
+      "title": "Chicago to Aurora transit outing"
+    },
+    {
+      "task_id": "890a6880049a42684ac91a2e1809442846f9394c",
+      "tag": "odysseys",
+      "scenario": "travel",
+      "role": "practical",
+      "persona": "travel-practical",
+      "title": "Chicago to Aurora transit outing"
+    },
+    {
+      "task_id": "890a6880049a42684ac91a2e1809442846f9394c",
+      "tag": "odysseys",
+      "scenario": "travel",
+      "role": "senior",
+      "persona": "travel-senior",
+      "title": "Chicago to Aurora transit outing"
+    },
+    {
+      "task_id": "890a6880049a42684ac91a2e1809442846f9394c",
+      "tag": "odysseys",
+      "scenario": "travel",
+      "role": "young",
+      "persona": "travel-young",
+      "title": "Chicago to Aurora transit outing"
+    },
+    {
+      "task_id": "890a6880049a42684ac91a2e1809442846f9394c",
+      "tag": "odysseys",
+      "scenario": "travel",
+      "role": "none",
+      "persona": "none",
+      "title": "Chicago to Aurora transit outing"
+    },
+    {
+      "task_id": "1a625276b600a49df9521941df46cac8862790b9",
+      "tag": "real",
+      "scenario": "travel",
+      "role": "expert",
+      "persona": "travel-expert",
+      "title": "Book an XL ride from 388 Beale to Amber Indian"
+    },
+    {
+      "task_id": "1a625276b600a49df9521941df46cac8862790b9",
+      "tag": "real",
+      "scenario": "travel",
+      "role": "practical",
+      "persona": "travel-practical",
+      "title": "Book an XL ride from 388 Beale to Amber Indian"
+    },
+    {
+      "task_id": "1a625276b600a49df9521941df46cac8862790b9",
+      "tag": "real",
+      "scenario": "travel",
+      "role": "senior",
+      "persona": "travel-senior",
+      "title": "Book an XL ride from 388 Beale to Amber Indian"
+    },
+    {
+      "task_id": "1a625276b600a49df9521941df46cac8862790b9",
+      "tag": "real",
+      "scenario": "travel",
+      "role": "young",
+      "persona": "travel-young",
+      "title": "Book an XL ride from 388 Beale to Amber Indian"
+    },
+    {
+      "task_id": "1a625276b600a49df9521941df46cac8862790b9",
+      "tag": "real",
+      "scenario": "travel",
+      "role": "none",
+      "persona": "none",
+      "title": "Book an XL ride from 388 Beale to Amber Indian"
+    }
+  ]
+}

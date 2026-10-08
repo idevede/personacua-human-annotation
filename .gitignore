@@ -1,0 +1,11 @@
+# Screenshots are hardlinks to the downloaded subset. Regenerate with tools/import_subset.py.
+assets/
+
+# Slot-to-model map. The annotation page must not receive this file.
+data/manifest.private.json
+
+__pycache__/
+*.py[cod]
+.DS_Store
+logs/
+.cursor/

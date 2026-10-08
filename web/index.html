@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>PersonaCUA 人工标注</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div id="login" class="login-shell">
+      <section class="login-card" aria-labelledby="login-title">
+        <div class="eyebrow">PersonaCUA · 人工标注</div>
+        <h1 id="login-title">看看模型有没有把事情做完</h1>
+        <p>
+          先写上你的名字。上次做到哪，这次会接着来。结果记在以你名字命名的文件里。
+        </p>
+        <form id="login-form">
+          <label for="annotator-name">你的名字</label>
+          <div class="login-row">
+            <input
+              id="annotator-name"
+              name="annotator"
+              autocomplete="name"
+              maxlength="80"
+              placeholder="例如：张三 / alice"
+              required
+            />
+            <button class="button primary" type="submit">开始</button>
+          </div>
+          <p id="login-error" class="form-error" role="alert"></p>
+        </form>
+        <div class="study-note">
+          <strong>怎么判</strong>
+          <span>只看任务、模型实际做了什么，以及截图。模型真名已经藏起来了，你看到的是模型 A、模型 B，后面也可能有更多。</span>
+        </div>
+      </section>
+    </div>
+
+    <div id="app" class="app-shell" hidden>
+      <header class="topbar">
+        <div class="brand-block">
+          <div class="brand-mark" aria-hidden="true">P</div>
+          <div>
+            <div class="brand-name">PersonaCUA 人工标注</div>
+            <div id="dataset-caption" class="muted compact"></div>
+          </div>
+        </div>
+        <div class="header-progress">
+          <div class="progress-copy">
+            <strong id="progress-label">0 / 0 已完成</strong>
+            <span id="progress-percent">0%</span>
+          </div>
+          <div
+            id="progress-track"
+            class="progress-track"
+            role="progressbar"
+            aria-labelledby="progress-label"
+            aria-valuemin="0"
+            aria-valuemax="0"
+            aria-valuenow="0"
+          >
+            <span id="progress-bar"></span>
+          </div>
+        </div>
+        <div class="header-actions">
+          <span id="save-status" class="save-status" aria-live="polite">已加载</span>
+          <span id="annotator-badge" class="annotator-badge"></span>
+          <button id="export-button" class="button quiet" type="button">下载备份</button>
+          <button id="switch-user" class="button quiet" type="button">切换姓名</button>
+        </div>
+      </header>
+
+      <div class="workspace">
+        <aside class="sidebar">
+          <div class="filter-block">
+            <label for="scenario-filter">场景</label>
+            <select id="scenario-filter"><option value="all">全部场景</option></select>
+          </div>
+          <div class="filter-block">
+            <label for="persona-filter">人设</label>
+            <select id="persona-filter"><option value="all">全部人设</option></select>
+          </div>
+          <div class="filter-block">
+            <label for="status-filter">状态</label>
+            <select id="status-filter">
+              <option value="all">全部状态</option>
+              <option value="incomplete">还没做完</option>
+              <option value="complete">已经做完</option>
+            </select>
+          </div>
+          <button id="next-incomplete" class="button primary full" type="button">跳到下一个没做完的</button>
+          <div class="sidebar-heading">
+            <span>标注单元</span><span id="filtered-count" class="count-chip">0</span>
+          </div>
+          <nav id="case-list" class="case-list" aria-label="标注单元列表"></nav>
+        </aside>
+
+        <main id="main" class="main-content" tabindex="-1">
+          <section class="task-panel">
+            <div class="task-meta">
+              <span id="scenario-chip" class="chip accent"></span>
+              <span id="suite-chip" class="chip"></span>
+              <span id="persona-chip" class="chip"></span>
+              <span id="case-position" class="muted"></span>
+            </div>
+            <h1 id="task-title"></h1>
+            <p id="task-title-en" class="title-en"></p>
+            <div id="scenario-panel" class="scenario-panel"></div>
+            <div class="task-block">
+              <div class="block-kicker">原始任务</div>
+              <p class="block-lead">这是所有模型一开始拿到的同一份任务。先看这一份，再往下看改写之后的说法。</p>
+              <div id="task-description-zh" class="long-copy"></div>
+              <details id="original-english" class="task-details">
+                <summary>看英文原文</summary>
+                <div id="task-description" class="long-copy muted-copy"></div>
+              </details>
+            </div>
+          </section>
+
+          <section id="model-panel" class="model-switch-panel">
+            <div>
+              <div class="eyebrow">一次看一个</div>
+              <h2>选你要判的模型</h2>
+            </div>
+            <div id="model-switch" class="model-switch" role="tablist" aria-label="选择模型"></div>
+            <p id="rewrite-note" class="comparison-note"></p>
+          </section>
+
+          <section id="model-grid" class="model-grid" aria-label="当前模型的输出"></section>
+
+          <section class="rubric-panel">
+            <div class="section-heading">
+              <div>
+                <div class="eyebrow">逐项来看</div>
+                <h2>这一项算不算做完</h2>
+              </div>
+              <span id="case-completion" class="completion-badge" aria-live="polite">还没做完</span>
+            </div>
+            <p class="rubric-help">
+              现在判的是你选中的那个模型。看到提示里说的证据，就可以给「得分」；明明没做到，选「不得分」；材料对不上或看不清，选「证据不足」。提示是 Grok 4.7 写的，不是模型 A 或 B 的名字。每个模型都要判过，这一条才算完成。
+            </p>
+            <div id="rubric-list" class="rubric-list"></div>
+            <label class="overall-note">
+              <span>这条备注（可选）</span>
+              <textarea id="overall-note" rows="3" placeholder="页面异常、截图打不开，或其他你想留给自己的话"></textarea>
+            </label>
+          </section>
+
+          <footer class="case-footer">
+            <button id="previous-case" class="button secondary" type="button">← 上一个</button>
+            <span class="keyboard-tip">快捷键：A / D 翻截图，1 / 2 换模型，[ / ] 换下一条</span>
+            <button id="save-next" class="button primary" type="button">保存并进入下一个 →</button>
+          </footer>
+        </main>
+      </div>
+    </div>
+
+    <dialog id="image-dialog" class="image-dialog" aria-describedby="dialog-caption">
+      <button id="close-image" class="dialog-close" type="button" aria-label="关闭">×</button>
+      <img id="dialog-image" alt="放大的操作截图" />
+      <p id="dialog-caption"></p>
+    </dialog>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="/app.js" defer></script>
+  </body>
+</html>

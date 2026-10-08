@@ -1,0 +1,586 @@
+{
+  "credit": "Grok 4.7",
+  "labels": {
+    "family": {
+      "art": "艺术",
+      "community": "社区",
+      "ecommerce": "电商",
+      "food": "美食",
+      "health": "健康",
+      "lifestyle": "生活",
+      "productivity": "效率",
+      "professional": "职业",
+      "science": "科学",
+      "tech": "科技",
+      "travel": "出行"
+    },
+    "role": {
+      "expert": "专家",
+      "practical": "务实",
+      "senior": "年长",
+      "young": "年轻",
+      "none": "对照"
+    },
+    "suite": {
+      "odysseys": "开放网页",
+      "real": "模拟真实网站"
+    },
+    "setting": {
+      "life": "生活",
+      "work": "工作"
+    },
+    "level": {
+      "easy": "简单",
+      "medium": "中等",
+      "hard": "困难"
+    },
+    "domain": {
+      "Art": "艺术",
+      "Community": "社区",
+      "Ecommerce": "电商",
+      "Food": "美食",
+      "Health": "健康",
+      "Lifestyle": "生活方式",
+      "Science": "科学",
+      "Tech": "科技",
+      "Travel": "出行",
+      "OpenDining (OpenTable)": "订餐（类似 OpenTable）",
+      "Zilloft (Zillow)": "找房（类似 Zillow）",
+      "GoMail (Gmail)": "邮件（类似 Gmail）",
+      "GoCalendar (Google Calendar)": "日历（类似 Google 日历）",
+      "TopWork (Upwork)": "接单（类似 Upwork）",
+      "NetworkIn (LinkedIn)": "职业社交（类似 LinkedIn）",
+      "Udriver (Uber)": "打车（类似 Uber）"
+    }
+  },
+  "tasks": {
+    "80257c727b8e8c5426c1b03a2a4493231747e5d7": {
+      "title_zh": "做一个很小的 React 艺术原型",
+      "description_zh": "我想做一个很小的 React 艺术网页原型，请帮我把材料在浏览器里找齐，让我能亲眼看到。先打开 JetBrains，弄清他们专门用来编写、整理网页代码的是哪一款 IDE。再用 Google 图片找一张背景透明的卡通老鼠，把来源页和图片原文件分两个标签打开，让我确认是真透明，不是白底画在图里。还在 Google 图片里时，搜索 “taffy tails stretchy”，选一个 Taffy Tails 里 Stretchy 的结果并把结果页打开，方便我比较普通老鼠和这个角色风格。然后打开 react-svgr.com，把一个简单 SVG 转成 React 组件，转换结果留在页面上。接着用 Google 查：CapCut 网页版的项目能不能挪到 CapCut 桌面版；再找在 CapCut 里给导入的照片换背景颜色的步骤。请把最有用的页面留在打开的标签里，最后给一份简短制作笔记：推荐的 IDE、两个图片来源、React 组件代码，以及针对这两张老鼠素材的 CapCut 说明。",
+      "domain": "Art",
+      "setting": "work",
+      "rubrics": {
+        "R1": {
+          "criterion_zh": "正确指出 JetBrains 里专门用来编写和整理网页代码的 IDE，并在回答里写出名字。",
+          "hint_zh": "看到这些就可以判得分：最终笔记写出了 WebStorm，截图里打开的也是 JetBrains 面向网页开发的那一页。"
+        },
+        "R2": {
+          "criterion_zh": "给出一张背景透明的卡通老鼠，并同时给出图片直链和来源页网址。",
+          "hint_zh": "看到这些就可以判得分：最终笔记里有直链和来源页两个网址，截图里这两页是分开打开的，而且能看出背景是透明的。"
+        },
+        "R3": {
+          "criterion_zh": "给出一条 Google 图片里 Stretchy（Taffy Tails）的结果，并打开来源页方便对比。",
+          "hint_zh": "看到这些就可以判得分：截图里搜过 “taffy tails stretchy”，打开了一个 Stretchy 的结果页，最终笔记写了这个来源。"
+        },
+        "R4": {
+          "criterion_zh": "用 SVGR 把 SVG 转成 React 组件，并给出生成的代码。",
+          "hint_zh": "看到这些就可以判得分：打开过 react-svgr.com，页面上能看到转换结果，最终笔记里有一段说得通的 React 组件代码。"
+        },
+        "R5": {
+          "criterion_zh": "说明 CapCut 网页版项目怎么迁到桌面版；如果不能直接迁，也要写清楚，并带上依据。",
+          "hint_zh": "看到这些就可以判得分：最终笔记给了明确结论，而且这个结论能对上浏览时打开过的页面。写成“不能直接搬，要用别的办法”也算。"
+        },
+        "R6": {
+          "criterion_zh": "说明在 CapCut 里怎么改导入照片后面的背景颜色。",
+          "hint_zh": "看到这些就可以判得分：最终笔记里有一套能照着做的 CapCut 步骤，专门讲换导入图片的背景色。"
+        },
+        "R7": {
+          "criterion_zh": "把 IDE、两个图片来源、React 代码和 CapCut 步骤收成一份简短笔记，并针对这两张老鼠素材来写。",
+          "hint_zh": "看到这些就可以判得分：最终回答把前面几步收在一起，而且明确说到普通老鼠和 Stretchy 该怎么配这些步骤。"
+        }
+      }
+    },
+    "3868f9b52e96067b4f55834a3b110e1228b48e65": {
+      "title_zh": "洛杉矶后期制作 IT 的入行路径",
+      "description_zh": "我在考虑去洛杉矶做后期制作，尤其是影视娱乐行业的 IT 工程师，想知道一条现实的入行路径。请先用 Google 查这类雇主通常要求什么，整理出至少 3 条反复出现的要求，以及至少 2 条具体的培训或认证路径。然后打开 Motion Picture Editors Guild 的网站，找到西海岸或洛杉矶加入 IATSE Local 700 的实际路径，包括步骤、资格，以及申请、名册、费用或经验要求。重要页面请分标签打开，把最有用的那页留着。再回到 Google，找现在洛杉矶或更广的西海岸、和前面那些要求对得上的职位，至少打开 2 条还在招的职位，每条记下职位名、公司、地点、和前面要求的关系，以及有没有提到签证担保或工作许可。最后再用 Google 做一份 Rosie O’Donnell 和 Donald Trump 争执的简短时间线，至少 3 个有日期的公开节点。请交一份分节清楚的职业简报：培训路径、Local 700 入会、相关职位、时间线，并说明哪些页面还开着。",
+      "domain": "Art",
+      "setting": "work",
+      "rubrics": {
+        "R1": {
+          "criterion_zh": "总结出媒体娱乐行业 IT 工程师至少 3 条常见要求，以及至少 2 条具体培训或认证途径。",
+          "hint_zh": "看到这些就可以判得分：最终简报有培训这一节，里面至少 3 条反复出现的要求、2 个点了名的培训或认证，而且能对上来源页面。"
+        },
+        "R2": {
+          "criterion_zh": "用剪辑工会网站说明西海岸 / 洛杉矶加入 IATSE Local 700 的路径，包括步骤、资格和申请细节。",
+          "hint_zh": "看到这些就可以判得分：最终简报有工会入会这一节，内容来自 editorsguild.com，浏览器里还开着相关的 Local 700 页面。"
+        },
+        "R3": {
+          "criterion_zh": "找出至少 2 个现在还在招的洛杉矶或西海岸职位，并说明有没有提到签证担保或工作许可。",
+          "hint_zh": "看到这些就可以判得分：至少两个职位页分标签开着，最终简报对每个都写了职位、公司、地点、和前面要求的关系，以及签证或工作许可。"
+        },
+        "R4": {
+          "criterion_zh": "给出 Rosie O’Donnell 和 Donald Trump 争执的简短时间线，至少 3 个有日期的节点。",
+          "hint_zh": "看到这些就可以判得分：最终简报里有时间线，至少 3 件事，每件都有日期，而且彼此分得开。"
+        },
+        "R5": {
+          "criterion_zh": "交一份分节清楚的职业简报，并说明哪些页面还留着给用户看。",
+          "hint_zh": "看到这些就可以判得分：回答分成培训、工会、职位、时间线这几节，并且明确提到工会页和职位页还开着。"
+        }
+      }
+    },
+    "2cb0ed2a5df6053c6c982a5c5d436d25e006370f": {
+      "title_zh": "用官方页面安排巴尔的摩的一晚",
+      "description_zh": "我想简单安排巴尔的摩的一个活动之夜，只要把官方页面打开，确认我从对的地方开始。请打开 Please Find Your Seat 的官方首页，给我首页网址。再找到 Pier 5 Hotel Baltimore 的官方网站，把酒店页单独留在一个标签里。然后打开 The Capital Grille 的官方首页，按页面上的写法记下餐厅品牌名。关键页面请分标签留着。最后给一段短计划：Please Find Your Seat 首页网址、Pier 5 酒店官网、The Capital Grille 首页网址，以及页面上显示的品牌名。",
+      "domain": "Community",
+      "setting": "life",
+      "rubrics": {
+        "R1": {
+          "criterion_zh": "给出活动平台 Please Find Your Seat 的官方首页网址。",
+          "hint_zh": "看到这些就可以判得分：回答里的网址是它的官方首页，而且和浏览器里打开的页面一致。"
+        },
+        "R2": {
+          "criterion_zh": "给出 Pier 5 Hotel Baltimore 的官网，并把酒店页单独留在一个标签里。",
+          "hint_zh": "看到这些就可以判得分：回答里的网址是这家酒店的官网，截图里酒店页还开着。"
+        },
+        "R3": {
+          "criterion_zh": "给出 The Capital Grille 的官方首页网址，并按首页上的文字写出品牌名。",
+          "hint_zh": "看到这些就可以判得分：网址是官方首页，写出的品牌名和页面上能看见的文字一致。"
+        },
+        "R4": {
+          "criterion_zh": "把活动平台、酒店和晚餐这几项收成一段短计划。",
+          "hint_zh": "看到这些就可以判得分：最终回答里同时有 Please Find Your Seat 网址、Pier 5 酒店网址，以及 The Capital Grille 的网址和品牌名。"
+        }
+      }
+    },
+    "140960bb7293bdeeb6bcc60931681cb9b815351b": {
+      "title_zh": "教堂山附近的社区食物箱",
+      "description_zh": "我想在教堂山和卡伯勒附近排一个很简单的办事路线。请先用 Google 找至少 3 个在教堂山 / 卡伯勒市内或很近的公共小食物箱或社区食物柜，把每个的地图或列表页分标签打开，让我能确认它们是真地方、看起来还在用。然后去 Publix 看本周 BOGO（买一送一），从广告里挑适合肉食晚餐的：只要肉、海鲜、奶酪、蛋或其他动物性食品。再用这些特价配出一顿只由合格商品组成的晚餐，并把周报或商品页留着。接着打开 Bisou Bisou 的网站，在菜单里找一杯确实是绿色的鸡尾酒，打开菜单页，告诉我酒名和配料。请给出食物箱的地址或清楚的位置、用到的 Publix BOGO 商品和这顿搭配，以及绿色鸡尾酒的名字和配料。",
+      "domain": "Community",
+      "setting": "life",
+      "rubrics": {
+        "R1": {
+          "criterion_zh": "在教堂山 / 卡伯勒附近找到至少 3 个公共食物箱或小食物柜，每个都有地址或清楚的位置。",
+          "hint_zh": "看到这些就可以判得分：能确认 3 个不同地点，地图或列表页分得开，每个都有地址或看得清的位置说明。"
+        },
+        "R2": {
+          "criterion_zh": "找出当前 Publix 买一送一里适合肉食的商品。",
+          "hint_zh": "看到这些就可以判得分：列出的商品出现在当期 Publix 周报或商品页上，而且是肉、海鲜、奶酪、蛋这类动物性食物。"
+        },
+        "R3": {
+          "criterion_zh": "用上面那些肉食特价，配出一顿晚餐，配料只能来自这些商品。",
+          "hint_zh": "看到这些就可以判得分：这顿饭的每一部分都能在上一步的合格 BOGO 商品里找到，没有额外塞进别的食材。"
+        },
+        "R4": {
+          "criterion_zh": "从 Bisou Bisou 的鸡尾酒菜单里找出一杯绿色鸡尾酒，写出名字和配料。",
+          "hint_zh": "看到这些就可以判得分：菜单页上确实有这杯酒，回答里的名字和配料与页面一致。"
+        }
+      }
+    },
+    "63d68bb25e279fc22e6e3592d8ca59add33b6eb1": {
+      "title_zh": "明尼阿波利斯附近 5 万美元以内的家用车",
+      "description_zh": "我想在明尼阿波利斯—圣保罗一带买家用车，要一份以后能自己翻的候选清单。请用 Cars.com 搜索明尼苏达州明尼阿波利斯附近、价格不超过 50,000 美元、适合四口之家的车，比如中型 SUV、跨界车、面包车或其他明显适合日常家用的车。有希望的车请各自开一个标签，车辆页上要能看到价格、里程、年款和经销商位置。请收集大约 15 辆还在售、而且没超预算的车。如果座位或家用适不适合看不出来，就去 Edmunds 核对这款车的车身或座位，确认了再留下。然后建一份名为 Minneapolis Family Cars 的 CryptPad 表格，列：品牌和型号、年款、价格、里程、经销商位置、链接。每一行对应一个还开着的车辆标签。最后简短总结：哪些型号最常出现、哪些从年份、里程和价格看更值，以及最后这批主要是 SUV 还是面包车。表格和车辆标签都留着。",
+      "domain": "Ecommerce",
+      "setting": "life",
+      "rubrics": {
+        "R1": {
+          "criterion_zh": "用 Cars.com 搜索明尼阿波利斯附近、价格不超过 5 万美元、而且适合家用的车。",
+          "hint_zh": "看到这些就可以判得分：截图里是 Cars.com 的结果页，能看出明尼阿波利斯一带，最高价不超过 50,000 美元，结果是家用车。"
+        },
+        "R2": {
+          "criterion_zh": "从结果里打开大约 15 个有希望的家用车页面，每个一页一个标签。",
+          "hint_zh": "看到这些就可以判得分：能看到大约 15 个分开的车辆页标签，每页是一辆不同的候选车。"
+        },
+        "R3": {
+          "criterion_zh": "逐辆核对品牌型号、年份、价格、里程、经销商位置，并且还在售、没超预算、适合四口之家。",
+          "hint_zh": "看到这些就可以判得分：打开的车辆页上这些信息都看得到，和最终记录对得上，没有超过 5 万美元或明显不适合家用的车。"
+        },
+        "R4": {
+          "criterion_zh": "座位或车身看不清的，先在 Edmunds 上核对再放进名单。",
+          "hint_zh": "看到这些就可以判得分：看不清的那些车，有 Edmunds 页面或核对痕迹，能确认车身或家用座位。"
+        },
+        "R5": {
+          "criterion_zh": "建一份标题是 Minneapolis Family Cars 的 CryptPad 表格。",
+          "hint_zh": "看到这些就可以判得分：表格标题就显示为 Minneapolis Family Cars。"
+        },
+        "R6": {
+          "criterion_zh": "表格包含这些列：品牌和型号、年款、价格、里程、经销商位置、链接。",
+          "hint_zh": "看到这些就可以判得分：表头里这些列名都在。"
+        },
+        "R7": {
+          "criterion_zh": "表格里大约有 15 行已核对的车，每行对得上一个还开着的标签，并且有能用的链接。",
+          "hint_zh": "看到这些就可以判得分：行数大约 15，每行能对上打开的车辆页，链接和页面上的信息一致。"
+        },
+        "R8": {
+          "criterion_zh": "用一段短总结说明最常见的型号、更值的选择，以及 SUV 和面包车哪个更多；表格和标签都留着。",
+          "hint_zh": "看到这些就可以判得分：最终文字说到了这三点，而且表格和车辆标签还开着。"
+        }
+      }
+    },
+    "44f1e02116715d5fe313996811b358fe25bc3ee4": {
+      "title_zh": "家里几辆车的配件短名单",
+      "description_zh": "我想给家里几辆车列一份配件短名单，要看到真实商品页，不要只给文字。请先在 WeatherTech 用车辆选择器选 2020 款 Toyota Highlander，确认哪款脚垫、哪款后备箱衬垫或行李垫真正合适。找到后备箱衬垫后，打开真正的商品页并留着，方便我看照片和适配说明。然后去 Temu 找一套能用在 Fiat 500 上的汽车头枕挂钩，打开真实商品页，记下商品名，以及页面上为什么看起来能用于 Fiat 500。再用 Google 找一个适合 2023 款 Honda Civic 的 LED 车标，把商品页单独打开，记下商品名和当前价格。最后给一段简短对比：Highlander 的适配情况、WeatherTech 后备箱衬垫直链、Fiat 500 挂钩及适配说明、Civic LED 车标及价格。",
+      "domain": "Ecommerce",
+      "setting": "life",
+      "rubrics": {
+        "R1": {
+          "criterion_zh": "找出适合 2020 款 Toyota Highlander 的 WeatherTech 脚垫，并写明适配情况。",
+          "hint_zh": "看到这些就可以判得分：WeatherTech 按车型筛选的结果或商品页上，能看到这款脚垫对应 2020 Toyota Highlander。"
+        },
+        "R2": {
+          "criterion_zh": "找出适合这辆 Highlander 的 WeatherTech 后备箱衬垫或行李垫，并给出商品页直链。",
+          "hint_zh": "看到这些就可以判得分：打开的 WeatherTech 页面就是合适的后备箱产品，回答里有直链。"
+        },
+        "R3": {
+          "criterion_zh": "在 Temu 找到一套能用在 Fiat 500 上的汽车头枕挂钩，并写出商品名。",
+          "hint_zh": "看到这些就可以判得分：Temu 商品页开着，写出的名字和页面标题一致。"
+        },
+        "R4": {
+          "criterion_zh": "根据 Temu 页面上的文字，说明这套挂钩为什么能用在 Fiat 500 上。",
+          "hint_zh": "看到这些就可以判得分：引用的是页面上能看见的适配说明，比如通用、头枕安装或尺寸。"
+        },
+        "R5": {
+          "criterion_zh": "找到一个适合 2023 款 Honda Civic 的 LED 车标，并写出商品名。",
+          "hint_zh": "看到这些就可以判得分：Google 结果或打开的商品页上，这个 LED 车标和 2023 Honda Civic 对得上。"
+        },
+        "R6": {
+          "criterion_zh": "写上这个 Civic LED 车标页面上显示的价格。",
+          "hint_zh": "看到这些就可以判得分：回答里的价格和商品页或搜索结果上看见的价格一致。"
+        },
+        "R7": {
+          "criterion_zh": "用一段简短对比把三辆车和对应配件都覆盖到。",
+          "hint_zh": "看到这些就可以判得分：最终回答里有 Highlander 的脚垫和后备箱适配及链接、Fiat 500 挂钩的名字和适配说明、Civic LED 车标的名字和价格。"
+        }
+      }
+    },
+    "082aa17f3e88c3ce10796244e3677c5643dd19c9": {
+      "title_zh": "烤抱子甘蓝食谱和新厨房准备",
+      "description_zh": "我在布置新厨房，第一道菜想做烤抱子甘蓝。请用 Google 找一份明确同时用了帕玛森芝士和香醋的食谱，打开真正的食谱页，记下标题、烤箱温度和时长。然后去 Le Creuset 找浅绿色荷兰锅，具体看 5.5 夸脱有没有这个颜色，打开商品页并留着。再去 YouTube 找一个实用视频：洗碗机安装要不要空气隔，打开视频页并开始播放，告诉我主要判断点：什么时候必须装空气隔、什么时候改用高位回路、空气隔是干什么的。请把食谱、Le Creuset 商品页和 YouTube 分三个标签留着。",
+      "domain": "Food",
+      "setting": "life",
+      "rubrics": {
+        "R1": {
+          "criterion_zh": "找到烤抱子甘蓝食谱，食谱页上同时有帕玛森和香醋，并记下标题、烤箱温度和时长。",
+          "hint_zh": "看到这些就可以判得分：打开的是食谱页本身，能看见标题、温度和时间，配料或正文里同时有 Parmesan 和香醋。"
+        },
+        "R2": {
+          "criterion_zh": "打开浅绿色 Le Creuset 荷兰锅的商品页，并正确说明 5.5 夸脱有没有这个颜色，包括产品名和颜色。",
+          "hint_zh": "看到这些就可以判得分：Le Creuset 商品页开着，能看见产品名、浅绿色，以及 5.5 夸脱在不在这个颜色里。"
+        },
+        "R3": {
+          "criterion_zh": "打开并播放一条关于洗碗机空气隔的 YouTube 视频，总结何时必须装、高位回路替代方案，以及空气隔的用途。",
+          "hint_zh": "看到这些就可以判得分：视频页开着并且已经开始播放，总结覆盖了这三件事，而且和视频主题一致。"
+        },
+        "R4": {
+          "criterion_zh": "食谱页、Le Creuset 商品页和 YouTube 视频页分三个标签都还开着。",
+          "hint_zh": "看到这些就可以判得分：标签栏里这三页都在，可以并排看。"
+        }
+      }
+    },
+    "4fa0f20b6ff73e4a86442a1f0dc16ca4ab03582d": {
+      "title_zh": "在 Haight-Ashbury 订一顿商务晚餐",
+      "description_zh": "帮我在 Haight-Ashbury 订一顿晚饭，时间是 9 月 22 日晚上 8 点到 10 点之间，6 个人，这是一顿商务餐。",
+      "domain": "OpenDining (OpenTable)",
+      "setting": "work",
+      "rubrics": {
+        "R1": {
+          "criterion_zh": "在 Haight-Ashbury 订好 9 月 22 日晚 8 点到 10 点之间、6 人的商务晚餐。",
+          "hint_zh": "看到这些就可以判得分：最终页面上能看到已经订上的晚餐：地点在 Haight-Ashbury，日期是 9 月 22 日，时间落在晚上 8 点到 10 点，人数是 6，并且标成商务用餐。"
+        }
+      }
+    },
+    "69782bfcfdb3311496bc9048bf66915b33e692cd": {
+      "title_zh": "比较 Clovis 的普拉提工作室",
+      "description_zh": "我想在弗雷斯诺 / Clovis 一带选一家普拉提馆，要能在屏幕上具体比较，不要笼统名单。请用 Google 找至少两家在加利福尼亚州 Clovis、明确有课的普拉提馆，把每家的课表或预约页单独打开并留着。然后扩大到弗雷斯诺一带，至少找 3 个普拉提课程选择，每家都要有真实课表或预约链接。再打开 Title 29 Fitness 的网站，看它在弗雷斯诺提供什么，尤其是和普拉提或团体课有关的内容，记下网站上的课表；如果有课表页或预约流程，也打开。最后给一段简短比较：两家 Clovis 馆、更广的弗雷斯诺名单，以及根据你实际看到的内容，Title 29 处在什么位置。",
+      "domain": "Health",
+      "setting": "life",
+      "rubrics": {
+        "R1": {
+          "criterion_zh": "找出至少两家在 Clovis、有课的普拉提馆，每家都给出名字和课表或预约页链接。",
+          "hint_zh": "看到这些就可以判得分：两家不同的 Clovis 馆都写出来了，课表或预约页分标签开着，或者链接能对上打开的页面。"
+        },
+        "R2": {
+          "criterion_zh": "给出弗雷斯诺一带至少 3 个普拉提课程选择，每家都有名字和课表或预约链接。",
+          "hint_zh": "看到这些就可以判得分：至少 3 个弗雷斯诺一带的选择都有名字，而且每个都有课表或预约链接。"
+        },
+        "R3": {
+          "criterion_zh": "查清 Title 29 Fitness 在弗雷斯诺提供什么，并记下网站上的课表细节。",
+          "hint_zh": "看到这些就可以判得分：回答里的服务内容和课表来自 title29fitness.com 上能看见的页面或预约流程。"
+        },
+        "R4": {
+          "criterion_zh": "用一段简短比较把 Clovis 的选择、更广的弗雷斯诺名单，以及 Title 29 的位置放在一起。",
+          "hint_zh": "看到这些就可以判得分：最终回答把这些选择放在一起比较，并且明确说了 Title 29 相对它们处在什么位置。"
+        }
+      }
+    },
+    "256342f13c0a03e080f92ee073153fe33a6881c0": {
+      "title_zh": "纽约膝盖外科医生短名单",
+      "description_zh": "我想要一份纽约市最好的膝盖外科医生短名单，因为可能要做前交叉韧带重建或半月板修复，而且我要能自己翻。请用 Google 找纽约专门做膝关节韧带重建、ACL 手术和半月板修复的骨科医生，建一份叫 Top ACL Surgeons NYC 的表格。每位候选人的医院或诊所官方简介页请单独打开。只有简介页上明确写了会做 ACL 重建、半月板修复、膝关节韧带重建或非常接近的运动医学膝盖手术，才能留下。每位留下的医生要记下全名、医院或诊所、专长、哪里写了 ACL 或半月板，以及简介直链。请一直找到正好 10 位已核实的纽约医生，每人的真实简介页都还开着。完成后，用这 10 条写一段短总结：哪些医院、骨科集团或医学中心出现得最多。",
+      "domain": "Health",
+      "setting": "life",
+      "rubrics": {
+        "R1": {
+          "criterion_zh": "建一份标题是 Top ACL Surgeons NYC 的表格，并用它来记。",
+          "hint_zh": "看到这些就可以判得分：能看到这个确切标题的表格，而且里面已经在填内容。"
+        },
+        "R2": {
+          "criterion_zh": "候选人的医院或诊所官方简介页是分标签打开的。",
+          "hint_zh": "看到这些就可以判得分：打开的是医生官方简介，不是普通搜索结果或目录摘要。"
+        },
+        "R3": {
+          "criterion_zh": "留下的每位医生，简介页上都能证明会做 ACL 重建、半月板修复、膝关节韧带重建，或非常接近的运动医学膝盖手术。",
+          "hint_zh": "看到这些就可以判得分：每个选中的简介页上，能找到支持这项的文字或手术列表。"
+        },
+        "R4": {
+          "criterion_zh": "每位医生都记下了全名、所属医院或诊所、专长、ACL 或半月板的确认说明，以及简介直链。",
+          "hint_zh": "看到这些就可以判得分：每一行这些字段都有，而且和打开的简介页对得上。"
+        },
+        "R5": {
+          "criterion_zh": "正好是 10 位纽约医生，每一行都对应一个还开着的官方简介页。",
+          "hint_zh": "看到这些就可以判得分：能数出正好 10 条完整记录，每条都能对上那个医生还开着的官方简介。"
+        },
+        "R6": {
+          "criterion_zh": "表格里有一段短总结，说明这 10 人里哪些医院、骨科集团或医学中心出现得最多。",
+          "hint_zh": "看到这些就可以判得分：表格里有一段文字，是在总结这 10 人的机构谁出现得更频繁。"
+        }
+      }
+    },
+    "d8fe04d1cf29251d68382cde58f4424e80bad07c": {
+      "title_zh": "注重隐私的双人日记，以及外部 AI 能碰到什么",
+      "description_zh": "我想和伴侣一起用共享日记，但对隐私很谨慎，尤其在意外面的 AI 工具能看到什么。请先打开 Oura 的支持网站，找到 Oura Membership 隐私相关说明，特别是怎样阻止 AI 代理读取会员信息，把那篇支持文章留着。然后去 Journey Cloud，看它的日记方案，以及共享日记、伴侣或双人使用、协作记录的页面；如果有价格或方案页，把主要选项分标签打开。再看 Formfacade 上关于 Huan Dao Meditation 应用的页面，告诉我这个应用是什么、它说自己用了哪些东方身心方法。然后用 Google 找到 Norton Secure VPN 的官方产品页，打开真正的 Norton 页面，从上面摘至少 3 个宣传功能，页面也留着。最后给一个简短建议：对照 Oura 的隐私说明，Journey Cloud 算不算合适；同时把 Huan Dao 当作身心功能的例子，把 Norton Secure VPN 当作隐私对比。",
+      "domain": "Lifestyle",
+      "setting": "life",
+      "rubrics": {
+        "R1": {
+          "criterion_zh": "总结 Oura 支持页里关于会员隐私的说明，包括怎样阻止 AI 代理读取会员信息。",
+          "hint_zh": "看到这些就可以判得分：浏览器停在 support.ouraring.com 的相关文章上，最终回答写了隐私说明，以及怎样阻止 AI 代理访问，而且这些话来自那一页。"
+        },
+        "R2": {
+          "criterion_zh": "总结 Journey Cloud 的共享日记能力，包括情侣、伴侣、朋友或共享日记，并写上价格。",
+          "hint_zh": "看到这些就可以判得分：打开过 journey.cloud 的价格和功能页，最好是分标签的；最终回答既写了共享功能，也写了方案价格。"
+        },
+        "R3": {
+          "criterion_zh": "说明 Huan Dao Meditation 是什么，并列出它声称使用的东方身心方法。",
+          "hint_zh": "看到这些就可以判得分：去过 Formfacade 上关于这个应用的页面，回答里的介绍和方法名称与那一页一致。"
+        },
+        "R4": {
+          "criterion_zh": "用 Google 找到 Norton Secure VPN 的官方产品页，说明它是什么，并列出至少 3 个页面上的功能。",
+          "hint_zh": "看到这些就可以判得分：用过 Google 结果，打开并留着官方 Norton 页面，最终回答至少有 3 个来自该页的功能。"
+        },
+        "R5": {
+          "criterion_zh": "对照 Oura 的隐私基线，建议 Journey Cloud 算不算符合预期，并把 Huan Dao 和 Norton 放进这个比较里。",
+          "hint_zh": "看到这些就可以判得分：最终建议直接用了 Oura 和 Journey Cloud 的发现，而且是在比较里提到 Huan Dao 和 Norton，不是把它们单独扔在一边。"
+        }
+      }
+    },
+    "36ba9459787fc18f62c6914cebc19d5dc91fe3f4": {
+      "title_zh": "在南加州找一套 100 万美元以下的房子并预约看房",
+      "description_zh": "我想搬到南加州。请在 Zilloft 上找总价低于 100 万美元的南加州房子，并至少预约 1 次看房。",
+      "domain": "Zilloft (Zillow)",
+      "setting": "life",
+      "rubrics": {
+        "R1": {
+          "criterion_zh": "在南加州找到总价低于 100 万美元的房子，并至少预约 1 次看房。",
+          "hint_zh": "看到这些就可以判得分：页面上能看到南加州、总价低于 100 万美元的房源，而且至少有一次看房已经订上。"
+        }
+      }
+    },
+    "44d29d36275c65f1663b909b0a46e9a81e39e675": {
+      "title_zh": "给 Barbara Thomas 写一封关于项目计划的邮件",
+      "description_zh": "请在 Go Mail 里给 Barbara Thomas 写一封关于项目计划的邮件。",
+      "domain": "GoMail (Gmail)",
+      "setting": "work",
+      "rubrics": {
+        "R1": {
+          "criterion_zh": "给 Barbara Thomas 写一封关于项目计划的邮件。",
+          "hint_zh": "看到这些就可以判得分：邮件已经发出或保存好，收件人是 Barbara Thomas，内容是在说项目计划。"
+        }
+      }
+    },
+    "7ef23d555c843be90276866c577c29960ca72ec7": {
+      "title_zh": "删掉周三日历上的项目同步",
+      "description_zh": "请在 GoCalendar 里删掉周三的项目同步。",
+      "domain": "GoCalendar (Google Calendar)",
+      "setting": "work",
+      "rubrics": {
+        "R1": {
+          "criterion_zh": "删掉周三日历上的项目同步。",
+          "hint_zh": "看到这些就可以判得分：日历里周三那场 project sync 已经不在了，能看出是删掉的，不是还留在原来的时间上。"
+        }
+      }
+    },
+    "d0ed06e50dabe8aba500009e0075e057cdf042d2": {
+      "title_zh": "发布一个金融分析师职位",
+      "description_zh": "请在 TopWork 上新建一个金融分析师职位，时薪在 45 到 65 美元之间。",
+      "domain": "TopWork (Upwork)",
+      "setting": "work",
+      "rubrics": {
+        "R1": {
+          "criterion_zh": "新建一个金融分析师职位，时薪在 45 到 65 美元之间。",
+          "hint_zh": "看到这些就可以判得分：网站上出现了这条新职位，职位是 Financial Analyst，时薪落在 45 到 65 美元之间。"
+        }
+      }
+    },
+    "4b2245ba1a44a89e6a584c06cc267f08d850ff3c": {
+      "title_zh": "和三个新的人建立联系",
+      "description_zh": "请在职业社交网站上和 3 个新的人建立联系。",
+      "domain": "NetworkIn (LinkedIn)",
+      "setting": "work",
+      "rubrics": {
+        "R1": {
+          "criterion_zh": "和 3 个新的人建立联系。",
+          "hint_zh": "看到这些就可以判得分：能看到向 3 个新的人发出了连接请求，或者已经连上了 3 个人。同一个人重复一次不算。"
+        }
+      }
+    },
+    "e15345ed27f1933065af403601876e5f6597a943": {
+      "title_zh": "五年级阅读辅助小课",
+      "description_zh": "我在给一个更适合扫读的学生准备一节很简单的阅读辅助小课，请在浏览器里把材料找齐。先用 Google 找一份大约五年级难度的在线英语语法练习测验，打开真正的测验页并留着，我需要测验标题和直链。再用 Google 找一份大约八年级、关于基本营销策略（产品、价格、渠道、推广，或很接近的入门概念）的可打印练习页，单独打开，记下标题和网址。然后去 Slidesgo 选一个有趣、适合课堂、能把语法热身和营销延伸放进同一份学生课件的模板，打开模板页让我看到预览图，并写上模板名、网址，以及能不能用于 Google 幻灯片或 PowerPoint。最后打开 10015.io 的仿生阅读转换器，把下面这段课前说明原样转成仿生阅读格式，好贴进模板第一页：“Today we will warm up with a short grammar quiz, then practice how people use basic marketing strategies like product, price, place, and promotion. Read each direction carefully and do your best.” 有用的标签请留着，最后把测验、练习页、模板和转换后的文字收成一份干净的总结。",
+      "domain": "Science",
+      "setting": "work",
+      "rubrics": {
+        "R1": {
+          "criterion_zh": "用 Google 找到一份大约五年级的在线英语语法练习测验，最终回答里有标题和测验页直链。",
+          "hint_zh": "看到这些就可以判得分：打开的是测验页本身，不是搜索结果；写出的标题和网址与页面一致。"
+        },
+        "R2": {
+          "criterion_zh": "用 Google 找到一份大约八年级、关于基本营销或很接近的入门营销主题的可打印练习页，并给出标题和网址。",
+          "hint_zh": "看到这些就可以判得分：打开的是练习页本身，能看出可打印或适合课堂，标题和网址与页面一致。"
+        },
+        "R3": {
+          "criterion_zh": "选一个有趣、适合课堂、能把两段活动放进同一份课件的 Slidesgo 模板，并给出名称、网址和可用格式。",
+          "hint_zh": "看到这些就可以判得分：Slidesgo 模板详情页开着，能看到预览图；名称、网址，以及 Google 幻灯片或 PowerPoint 选项与页面一致。"
+        },
+        "R4": {
+          "criterion_zh": "在 10015.io 上把指定的课前说明转成仿生阅读格式，并返回完整转换结果。",
+          "hint_zh": "看到这些就可以判得分：转换页上能看到这段话的转换结果，回答里的文字和页面上的结果一致。"
+        }
+      }
+    },
+    "8c30f2f9ceeac75b05c725c5397022bb4f9d32a0": {
+      "title_zh": "给初学者的人工智能说明：从 IBM 到硬件",
+      "description_zh": "我想给不太懂人工智能的人写一段很短、适合初学者的说明：先讲简单定义，再到一个认得出的产品，最后落到一个真实硬件例子。请用 Google 找到 IBM 解释人工智能和机器学习主要类型的页面，抽出至少 3 类，每类用一句大白话重写。然后去 Copilot.com，弄清这个网站是什么，用正好一句话说明它作为一个初学者认得出的 AI 产品是干什么的；如果有首页，请留着。再用 Google 找到 Tom’s Hardware 关于 Intel Granite Rapids WS 与 AMD Threadripper 竞争的文章，在新标签打开真正的文章，总结主要竞争说法，以及文章引用的规格，比如核心数或加速频率。再把这个硬件例子接回：为什么强芯片对人工智能或高级计算重要。最后给一份简短说明，把 IBM 的基础、那句 Copilot 介绍和 Tom’s Hardware 的要点合成初学者能看懂的一段。",
+      "domain": "Science",
+      "setting": "life",
+      "rubrics": {
+        "R1": {
+          "criterion_zh": "给出至少 3 个 IBM 讲过的人工智能或机器学习类别，每类用一句大白话说明。",
+          "hint_zh": "看到这些就可以判得分：最终回答至少有 3 个不同类别，每类一句，而且能追溯到从 Google 打开的 IBM 页面。"
+        },
+        "R2": {
+          "criterion_zh": "说明 Copilot 是什么，并用正好一句话概括它的用途，当作初学者认得出的 AI 产品。",
+          "hint_zh": "看到这些就可以判得分：最终回答里有单独一句在说 Copilot 的用途，浏览器里 Copilot 首页或落地页开着。"
+        },
+        "R3": {
+          "criterion_zh": "找到并总结 Tom’s Hardware 关于 Intel Granite Rapids WS 对标 AMD Threadripper 的文章，包括主要竞争说法和引用的规格。",
+          "hint_zh": "看到这些就可以判得分：文章页单独开着，最终回答写了主要说法，以及文章里提到的核心数、加速频率等规格。"
+        },
+        "R4": {
+          "criterion_zh": "把这篇硬件总结接回：为什么强硬件对人工智能或高级计算重要。",
+          "hint_zh": "看到这些就可以判得分：最终回答明确把这次硬件比较连到 AI 工作、高级计算，或对强算力的需要。"
+        },
+        "R5": {
+          "criterion_zh": "交一份简短说明，把 IBM 的类别、那句 Copilot 介绍和 Tom’s Hardware 的总结合成初学者能顺着读的一段。",
+          "hint_zh": "看到这些就可以判得分：最终是连成一篇的短说明，三部分都在，不是三堆互不相干的笔记。"
+        },
+        "R6": {
+          "criterion_zh": "浏览过程中把 Tom’s Hardware 的文章开在一个新标签里。",
+          "hint_zh": "看到这些就可以判得分：文章在自己的标签里，和 Google 搜索结果不是同一页。"
+        }
+      }
+    },
+    "fbcfa176b2e1aa42200d4f3adb66dcf0a6ca62ee": {
+      "title_zh": "很小的订阅预算：Patreon 和 ChatGPT",
+      "description_zh": "我想做一份很小的每月订阅预算，把几个创作者会员和 ChatGPT 比一比，看什么放得下。请先打开 Matt and Shane’s Secret Podcast 的 Patreon，记下页面上的会员档名称；再把这个播客和 Chris Sain 的 Patreon 分标签打开，方便我并排看档位和价格。然后打开 chatgpt.com 的价格页，记下当前方案名称和价格，我想知道只订一个创作者会员的同时，加 ChatGPT 还现不现实。再用 Google 找到真正的 HellHades 会员方案页，看有没有方案专门提到界面改进或自动化功能。请把 Patreon 标签和 ChatGPT 价格页留着，最后给一段简短、从预算出发的建议，把 Patreon 档位、ChatGPT 价格和 HellHades 的功能说明放在一起。",
+      "domain": "Tech",
+      "setting": "life",
+      "rubrics": {
+        "R1": {
+          "criterion_zh": "写出 Matt and Shane’s Secret Podcast 的 Patreon 会员页上显示的档位名称。",
+          "hint_zh": "看到这些就可以判得分：去过这个 Patreon 页面，写出的档位名和页面上能看见的一致。"
+        },
+        "R2": {
+          "criterion_zh": "记下这两个创作者的 Patreon 档位，每个档位都有页面上的名称和价格。",
+          "hint_zh": "看到这些就可以判得分：两个创作者页面分标签打开，写出的档位名和价格与各自页面一致。"
+        },
+        "R3": {
+          "criterion_zh": "从 ChatGPT 价格页记下方案名称和价格。",
+          "hint_zh": "看到这些就可以判得分：打开了 chatgpt.com 的价格页，写出的方案和价格与页面上的卡片或表格一致。"
+        },
+        "R4": {
+          "criterion_zh": "看 HellHades 会员方案页，说明有没有方案专门提到界面改进或自动化功能。",
+          "hint_zh": "看到这些就可以判得分：从 Google 进到了真正的会员页，并根据页面上的方案说明回答了有没有这两类功能。"
+        },
+        "R5": {
+          "criterion_zh": "给一个从预算出发的简短建议：ChatGPT 能不能和一份创作者会员放在一起，并把三边的发现用进去。",
+          "hint_zh": "看到这些就可以判得分：最终是一段建议，综合了 Patreon、ChatGPT 和 HellHades，而不是只把原始价格堆在那里。"
+        }
+      }
+    },
+    "10548585c3214aa1a15f7ceef8aa4fde0c2fcdf7": {
+      "title_zh": "Chromebook 笔记：Firefox 和 Apple 密码",
+      "description_zh": "我在给一个人写几条 Chromebook 帮助笔记。他总问：能不能不用 Chrome、改用 Firefox；在 Chrome 里还能不能拿到保存的 Apple 密码。请在真实浏览器里帮我查。先打开 Mozilla 官方 Firefox 网站上真正的 Chromebook 或 ChromeOS 安装说明，确认能不能装、Mozilla 说的安装方法是什么，页面留着。然后去 Chrome 网上应用店找 Apple 官方的 iCloud Passwords 扩展，打开真正的商品页，从页面上确认它是用来在 Chrome 里访问 iCloud 密码的，标签留着，我要看到发布者和网址。再用 Google 搜索 Google 文档里图片出现感叹号或加载不出来的可靠解决办法，打开一条有用的结果，摘出建议的修复步骤。然后打开 UserTesting 贡献者登录页，确认普通登录界面打得开；另一个标签打开 Patreon 首页，确认普通浏览也正常，两页都留着。最后去 YouTube 打开标题是 “Youtube Rewind 2011” 的视频，开始播放，告诉我开头看到了什么，好知道浏览器能播视频。结束时给一段简短总结：Firefox 在 Chromebook 上的结论、iCloud Passwords 扩展的名字和网址、Google 文档图片的修复办法，以及 UserTesting、Patreon、YouTube 是否都正常。",
+      "domain": "Tech",
+      "setting": "work",
+      "rubrics": {
+        "R1": {
+          "criterion_zh": "打开 Mozilla 关于 Firefox 在 Chromebook / ChromeOS 上的说明，并正确说明能不能安装，以及 Mozilla 写的安装方法。",
+          "hint_zh": "看到这些就可以判得分：开着 Mozilla 官方或支持页，最终回答说了能不能装，以及页面上写的安装或下载方法。"
+        },
+        "R2": {
+          "criterion_zh": "在 Chrome 网上应用店打开 Apple 官方的 iCloud Passwords 扩展页，记下准确名称和网址，并确认用途是在 Chrome 里访问 iCloud 密码。",
+          "hint_zh": "看到这些就可以判得分：应用店页面开着，能看出发布者是 Apple 或官方标识；最终回答有名称、网址和用途。"
+        },
+        "R3": {
+          "criterion_zh": "找到 Google 文档图片出现感叹号或加载失败的解决办法，并总结打开的结果里建议的修复步骤。",
+          "hint_zh": "看到这些就可以判得分：能看到搜索结果或打开的排错页，最终回答里是具体步骤，不是一句空话。"
+        },
+        "R4": {
+          "criterion_zh": "打开 UserTesting 贡献者登录页，并确认登录界面打得开。",
+          "hint_zh": "看到这些就可以判得分：能看到带登录框或贡献者登录界面的页面，最终回答明确说打得开。"
+        },
+        "R5": {
+          "criterion_zh": "在单独的标签打开 Patreon 首页，并从能看见的标识或标题确认首页正常打开。",
+          "hint_zh": "看到这些就可以判得分：标签里能看到 Patreon 首页的标识或标题，最终回答确认首页打开了。"
+        },
+        "R6": {
+          "criterion_zh": "打开标题为 Youtube Rewind 2011 的视频并成功开始播放。",
+          "hint_zh": "看到这些就可以判得分：看视频的页面开着，标题对得上，并且已经在播或时间往前走了；最终回答描述了开头看到的内容。"
+        },
+        "R7": {
+          "criterion_zh": "用一段简短总结覆盖这六个网站：Firefox、iCloud 密码扩展、Google 文档图片、UserTesting 登录、Patreon 首页、YouTube 播放。",
+          "hint_zh": "看到这些就可以判得分：最终回答把这六项的结论都写到了，没有漏掉主要的一项。"
+        }
+      }
+    },
+    "890a6880049a42684ac91a2e1809442846f9394c": {
+      "title_zh": "从芝加哥坐公共交通去奥罗拉",
+      "description_zh": "我在考虑从芝加哥市中心坐公共交通去伊利诺伊州奥罗拉，想要一份能在浏览器里核对的实用摘要。请在 Google 上搜索从芝加哥到奥罗拉的推荐公共交通路线，打开真正的公交路线，告诉我主要交通方式和预计总时间，路线页留着。然后打开 Metra 的 BNSF 线页面，总结这条线是什么、开到哪里，以及票价信息在这一页或网站的哪里；如果有单独的票价链接，另开一个标签。再去 Weather.com 看奥罗拉未来 10 天预报，给出接下来 3 天的最高和最低气温。请收成一份简短的出行摘要，并把 Google 公交路线和相关的 Metra 页面留着对比。",
+      "domain": "Travel",
+      "setting": "life",
+      "rubrics": {
+        "R1": {
+          "criterion_zh": "在 Google 上找到从芝加哥到奥罗拉的推荐公共交通路线，并写出主要交通方式和预计总时间。",
+          "hint_zh": "看到这些就可以判得分：Google 的公交路线或结果页开着，回答里的主要方式和时间来自这一页。"
+        },
+        "R2": {
+          "criterion_zh": "说明 Metra 的 BNSF 线是什么、开到哪里。",
+          "hint_zh": "看到这些就可以判得分：BNSF 线的页面开着，回答根据页面上的文字说清了这条线和覆盖范围。"
+        },
+        "R3": {
+          "criterion_zh": "指出坐 BNSF 线的票价信息在哪里，包括相关链接或页面区块。",
+          "hint_zh": "看到这些就可以判得分：回答指向 BNSF 页面上能看见的票价位置，或者 metra.com 上另外打开的票价页。"
+        },
+        "R4": {
+          "criterion_zh": "根据 Weather.com 上奥罗拉的 10 天预报，写出接下来 3 天的最高和最低气温。",
+          "hint_zh": "看到这些就可以判得分：奥罗拉的 10 天预报页开着，回答里 3 天的高低温和页面上的数字一致。"
+        },
+        "R5": {
+          "criterion_zh": "把公交建议、BNSF 线、票价位置和 3 天天气收成一份简短的出行摘要。",
+          "hint_zh": "看到这些就可以判得分：最终是一整段收在一起的摘要，前面这些内容都在里面。"
+        }
+      }
+    },
+    "1a625276b600a49df9521941df46cac8862790b9": {
+      "title_zh": "从 388 Beale 叫一辆 XL 去 Amber Indian",
+      "description_zh": "我和朋友要从 388 Beale 去 Amber Indian 餐厅，想要 XL 车型。请把这趟车订上。",
+      "domain": "Udriver (Uber)",
+      "setting": "life",
+      "rubrics": {
+        "R1": {
+          "criterion_zh": "订一辆从 388 Beale 到 Amber Indian 餐厅的 XL 车。",
+          "hint_zh": "看到这些就可以判得分：订单页面上上车点是 388 Beale，目的地是 Amber Indian，车型是 XL，而且已经下单，不是只停在估价页。"
+        }
+      }
+    }
+  }
+}
