@@ -203,6 +203,24 @@ input:focus, select:focus, textarea:focus, button:focus-visible, summary:focus-v
 .slot-button.active { border-color: var(--navy); color: #fff; background: var(--navy); }
 .slot-button.active small { color: rgb(255 255 255 / 78%); }
 
+.review-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
+  gap: 18px;
+  align-items: start;
+  margin-top: 18px;
+}
+.review-split .model-grid {
+  position: sticky;
+  top: 84px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+  margin: 0;
+}
+.review-split .rubric-panel { margin-top: 0; }
+.review-split .rubric-row { grid-template-columns: 1fr; }
+.review-split .other-slots,
+.review-split .rubric-note { grid-column: auto; }
 .model-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; margin: 18px 0; }
 .model-card { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); box-shadow: 0 6px 22px rgb(25 35 44 / 5%); }
 .model-card-header { display: flex; justify-content: space-between; align-items: center; padding: 15px 18px; color: #fff; background: var(--navy); }
@@ -216,7 +234,7 @@ input:focus, select:focus, textarea:focus, button:focus-visible, summary:focus-v
 .trace-viewer { padding: 15px 16px; }
 .screenshot-stage { position: relative; display: grid; place-items: center; min-height: 330px; overflow: hidden; border: 1px solid var(--line); border-radius: 11px; background: #e8e7e2; }
 .screenshot-zoom { display: block; width: 100%; padding: 0; border: 0; background: transparent; }
-.screenshot-stage img { display: block; width: 100%; height: min(68vh, 640px); object-fit: contain; cursor: zoom-in; background: #ebeae6; }
+.screenshot-stage img { display: block; width: 100%; height: min(52vh, 560px); object-fit: contain; cursor: zoom-in; background: #ebeae6; }
 .empty-shot { padding: 28px; color: var(--muted); text-align: center; font-size: 13px; }
 .final-frame-badge { position: absolute; top: 9px; left: 9px; padding: 4px 8px; border-radius: 99px; color: #fff; background: rgb(23 33 48 / 80%); font-size: 10px; font-weight: 800; }
 .trace-controls { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 8px; margin: 10px 0; }
@@ -284,6 +302,8 @@ input:focus, select:focus, textarea:focus, button:focus-visible, summary:focus-v
   .topbar { grid-template-columns: 1fr 1fr; }
   .header-progress { order: 3; grid-column: 1 / -1; }
   .workspace { grid-template-columns: 230px minmax(0, 1fr); }
+  .review-split { grid-template-columns: 1fr; }
+  .review-split .model-grid { position: static; max-height: none; overflow: visible; }
   .rubric-note { grid-column: 1 / -1; }
 }
 

@@ -6,6 +6,8 @@
 
 当前这批结果是 9 个模型、22 个任务、每个任务 5 个人设（`expert`、`practical`、`senior`、`young`、`none`），共 110 个标注单元、990 条输出、38545 张截图。页面上只显示模型 A 到 I，模型真名写在 `data/manifest.private.json`。
 
+五个人的人格分配和标注步骤在 [ASSIGNMENT.md](ASSIGNMENT.md)。
+
 ## 1. 从云盘下载
 
 到存放运行结果的云盘，下载压缩包：
