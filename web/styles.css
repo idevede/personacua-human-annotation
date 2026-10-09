@@ -227,7 +227,7 @@ input:focus, select:focus, textarea:focus, button:focus-visible, summary:focus-v
 .model-card[data-slot="B"] .model-card-header { background: #3e5366; }
 .model-name { font: 800 18px Georgia, serif; }
 .step-total { color: rgb(255 255 255 / 72%); font-size: 11px; }
-.opening { margin: 15px 16px 0; }
+.opening { margin: 0 16px 12px; }
 .opening.follow-up { margin-top: 9px; padding: 10px 11px; border-radius: 9px; background: var(--amber-soft); }
 .opening summary, .final-answer summary { cursor: pointer; color: var(--navy); font-size: 13px; font-weight: 750; }
 .opening-copy, .answer-copy { max-height: 320px; overflow: auto; margin-top: 9px; padding: 12px; border-radius: 9px; color: #394351; background: var(--surface-soft); white-space: pre-wrap; font-size: 13px; line-height: 1.6; }

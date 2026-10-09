@@ -432,19 +432,19 @@ function renderModels(item) {
         <span class="model-name">模型 ${escapeHtml(slot)}</span>
         <span class="step-total">${frames.length} 张截图 · ${(output.steps || []).length} 个步骤</span>
       </header>
-      <details class="opening" open>
+      <div class="trace-viewer" data-trace="${escapeHtml(slot)}"></div>
+      <details class="opening">
         <summary>改写后的任务入口</summary>
         <div class="opening-copy">${escapeHtml(output.opening || "（没有记录）")}</div>
       </details>
       ${laterUserMessages.length ? `
-        <details class="opening follow-up" open>
+        <details class="opening follow-up">
           <summary>做的过程中，用户又补了 ${laterUserMessages.length} 句</summary>
           <div class="opening-copy">${laterUserMessages.map((message, index) =>
             `<strong>补充 ${index + 1}</strong>\n${escapeHtml(message)}`
           ).join("\n\n")}</div>
         </details>` : ""}
-      <div class="trace-viewer" data-trace="${escapeHtml(slot)}"></div>
-      <details class="final-answer" open>
+      <details class="final-answer">
         <summary>最后的回答${output.stop_reason ? ` · ${escapeHtml(output.stop_reason)}` : ""}</summary>
         <div class="answer-copy">${escapeHtml(output.final_answer || "（没有最后的回答）")}</div>
       </details>
