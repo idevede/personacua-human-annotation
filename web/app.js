@@ -550,11 +550,14 @@ function renderRubrics(item) {
       return `模型 ${name}：${decisionLabels[value] || "还没选"}`;
     }).join(" · ");
     const checkerOnly = /prints SUCCESS|state checker/i.test(rubric.verification || "");
+    const verdict = (evidence?.verdict || "").trim();
+    const verdictLabel = evidence ? supportLabels[evidence.support] : "";
+    const verdictText = verdict.startsWith(verdictLabel) ? verdict : `${verdictLabel}。${verdict}`;
     const evidenceHtml = evidence ? `
       <div class="hint evidence-note">
         <div class="hint-kicker">${escapeHtml(credit)} 的提示</div>
         <p>${escapeHtml(evidence.finding)}</p>
-        <p class="evidence-verdict ${escapeHtml(evidence.support)}">${escapeHtml(supportLabels[evidence.support])}。${escapeHtml(evidence.verdict || "")}</p>
+        <p class="evidence-verdict ${escapeHtml(evidence.support)}">${escapeHtml(verdictText)}</p>
         <div class="evidence-jumps">
           ${evidence.frames.map(frame => `<button type="button" data-jump-frame="${frame}">打开第 ${frame} 张</button>`).join("")}
         </div>
