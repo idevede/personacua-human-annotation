@@ -9,3 +9,6 @@ __pycache__/
 .DS_Store
 logs/
 .cursor/
+
+# Held by tools/save_claude_notes.py while it merges notes.
+data/.claude_notes.lock

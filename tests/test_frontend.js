@@ -87,6 +87,26 @@ const checks = `
   delete state.manifest.cases[0].outputs;
   delete state.record.annotations.c.rubrics.R1.C;
 
+  const judged = {
+    case_id: "c",
+    rubrics: [{ rubric_id: "R1", criterion: "Opens the page" }],
+    outputs: [{
+      slot: "A",
+      claude_notes: {
+        R1: { decision: "unsure", frames: [4, 4], evidence: "第 4 张被弹窗挡住。", reason: "看不到正文。" },
+      },
+    }],
+  };
+  state.selectedSlot = "A";
+  renderRubrics(judged);
+  const html = el.rubricList.innerHTML;
+  assert.match(html, /Claude Opus 5\\.5 的判断/);
+  assert.match(html, /claude-decision unsure">证据不足/);
+  assert.equal(html.match(/data-jump-frame="4"/g).length, 1);
+  judged.outputs[0].claude_notes.R1.decision = "partial";
+  renderRubrics(judged);
+  assert.doesNotMatch(el.rubricList.innerHTML, /claude-note/);
+
   const local = structuredClone(state.record);
   local.client_revision = 2;
   local.annotations.c.rubrics.R1.B = "no";
