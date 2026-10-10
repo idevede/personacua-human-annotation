@@ -266,6 +266,13 @@ input:focus, select:focus, textarea:focus, button:focus-visible, summary:focus-v
 .evidence-verdict.yes { color: var(--green); }
 .evidence-verdict.partial { color: var(--amber); }
 .evidence-verdict.no { color: var(--coral); }
+.claude-note { border: 1px solid rgb(23 59 87 / 22%); background: #eef3f8; }
+.claude-note .hint-kicker { color: var(--navy); }
+.claude-decision { display: inline-block; margin-top: 6px !important; padding: 2px 9px; border-radius: 999px; color: #fff; font-weight: 800; }
+.claude-decision.yes { background: var(--green); }
+.claude-decision.no { background: var(--coral); }
+.claude-decision.unsure { background: var(--muted); }
+.claude-reason { color: var(--muted); }
 .evidence-jumps { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
 .evidence-jumps button {
   height: 28px; padding: 0 10px; border: 1px solid var(--line-strong); border-radius: 999px;
