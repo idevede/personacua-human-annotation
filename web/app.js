@@ -526,6 +526,15 @@ function evidenceFor(item, slot, rubricId) {
   return { ...note, frames };
 }
 
+function claudeNoteFor(item, slot, rubricId) {
+  const output = (item.outputs || []).find(entry => entry?.slot === slot);
+  const note = output?.claude_notes?.[rubricId];
+  if (!note || !decisionLabels[note.decision]) return null;
+  if (typeof note.evidence !== "string" || !note.evidence.trim()) return null;
+  const frames = [...new Set((note.frames || []).map(Number).filter(frame => frame >= 1))];
+  return { ...note, frames };
+}
+
 function jumpToFrame(item, slot, frameNumber) {
   const output = outputsBySlot(item)[slot];
   if (!output) return;
@@ -540,6 +549,7 @@ function renderRubrics(item) {
   const record = caseRecord(item.case_id);
   const slot = activeSlot(item);
   const credit = state.manifest?.evidence_credit || state.manifest?.guide_credit || "Grok 4.7";
+  const claudeCredit = state.manifest?.claude_credit || "Claude Opus 5.5";
   el.rubricList.innerHTML = (item.rubrics || []).map(rubric => {
     const rubricRecord = record.rubrics?.[rubric.rubric_id] || {};
     const criterion = rubric.criterion_zh || rubric.criterion || rubric.requirement || "";
@@ -562,6 +572,17 @@ function renderRubrics(item) {
           ${evidence.frames.map(frame => `<button type="button" data-jump-frame="${frame}">打开第 ${frame} 张</button>`).join("")}
         </div>
       </div>` : "";
+    const claude = claudeNoteFor(item, slot, rubric.rubric_id);
+    const claudeHtml = claude ? `
+      <div class="hint claude-note">
+        <div class="hint-kicker">${escapeHtml(claudeCredit)} 的判断</div>
+        <p class="claude-decision ${escapeHtml(claude.decision)}">${decisionLabels[claude.decision]}</p>
+        <p>${escapeHtml(claude.evidence)}</p>
+        ${claude.reason ? `<p class="claude-reason">${escapeHtml(claude.reason)}</p>` : ""}
+        ${claude.frames.length ? `<div class="evidence-jumps">
+          ${claude.frames.map(frame => `<button type="button" data-jump-frame="${frame}">打开第 ${frame} 张</button>`).join("")}
+        </div>` : ""}
+      </div>` : "";
     return `
       <article class="rubric-row" data-rubric="${escapeHtml(rubric.rubric_id)}">
         <div class="rubric-copy">
@@ -569,6 +590,7 @@ function renderRubrics(item) {
           <div class="rubric-criterion">${escapeHtml(criterion)}</div>
           ${english ? `<details class="rubric-english"><summary>英文标准</summary><div>${escapeHtml(english)}</div></details>` : ""}
           ${evidenceHtml}
+          ${claudeHtml}
           ${!evidence && rubric.hint_zh ? `<div class="hint"><div class="hint-kicker">${escapeHtml(credit)} 的提示</div><p>${escapeHtml(rubric.hint_zh)}</p></div>` : ""}
           ${!evidence && !rubric.hint_zh && rubric.verification && !checkerOnly ? `<div class="rubric-verification">可以对照：${escapeHtml(rubric.verification)}</div>` : ""}
         </div>

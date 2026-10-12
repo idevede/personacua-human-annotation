@@ -245,14 +245,50 @@ def clean_evidence_note(value: Any) -> dict[str, Any] | None:
     }
 
 
-def attach_evidence_notes(manifest: dict[str, Any], notes: dict[str, Any]) -> dict[str, Any]:
+def clean_claude_note(value: Any) -> dict[str, Any] | None:
+    """Keep one direct decision, the frames that show it, and the reason."""
+    if not isinstance(value, dict):
+        return None
+    decision = value.get("decision")
+    evidence = value.get("evidence")
+    reason = value.get("reason")
+    frames = value.get("frames")
+    if decision not in {"yes", "no", "unsure"}:
+        return None
+    if not isinstance(evidence, str) or not evidence.strip():
+        return None
+    if not isinstance(reason, str) or not reason.strip():
+        return None
+    if not isinstance(frames, list):
+        return None
+    cleaned_frames: list[int] = []
+    for frame in frames:
+        if isinstance(frame, bool) or not isinstance(frame, int) or frame < 1 or frame in cleaned_frames:
+            continue
+        cleaned_frames.append(frame)
+    return {
+        "decision": decision,
+        "frames": cleaned_frames,
+        "evidence": evidence.strip(),
+        "reason": reason.strip(),
+    }
+
+
+def attach_evidence_notes(
+    manifest: dict[str, Any],
+    notes: dict[str, Any],
+    *,
+    field: str = "evidence_notes",
+    credit_field: str = "evidence_credit",
+    clean: Any = clean_evidence_note,
+) -> dict[str, Any]:
     """Attach per-model screenshot findings. Notes are public and contain no model names."""
     cases = notes.get("cases") if isinstance(notes, dict) else None
     if not isinstance(cases, dict):
         return manifest
     attached = copy.deepcopy(manifest)
     if isinstance(notes.get("credit"), str) and notes["credit"].strip():
-        attached["evidence_credit"] = notes["credit"].strip()
+        attached[credit_field] = notes["credit"].strip()
     for case in attached.get("cases") or []:
         if not isinstance(case, dict):
             continue
@@ -268,11 +304,18 @@ def attach_evidence_notes(manifest: dict[str, Any], notes: dict[str, Any]) -> di
             cleaned = {
                 str(rubric_id): note
                 for rubric_id, raw in slot_notes.items()
-                if (note := clean_evidence_note(raw)) is not None
+                if (note := clean(raw)) is not None
             }
             if cleaned:
-                output["evidence_notes"] = cleaned
+                output[field] = cleaned
     return attached
+
+
+def attach_claude_notes(manifest: dict[str, Any], notes: dict[str, Any]) -> dict[str, Any]:
+    """Attach the stricter per-model decisions written by Claude."""
+    return attach_evidence_notes(
+        manifest, notes, field="claude_notes", credit_field="claude_credit", clean=clean_claude_note
+    )
 
 
 def validate_annotations(annotations: dict[str, Any], manifest: dict[str, Any]) -> None:
@@ -334,6 +377,7 @@ class AnnotationStore:
         self.guide_path = self.data_root / "guide.zh.json"
         self.scenarios_path = self.data_root / "scenarios.json"
         self.evidence_path = self.data_root / "evidence_notes.json"
+        self.claude_path = self.data_root / "claude_notes.json"
         self.annotations_root.mkdir(parents=True, exist_ok=True)
         self._write_lock = threading.Lock()
         self._public_manifest_lock = threading.Lock()
@@ -356,6 +400,7 @@ class AnnotationStore:
             file_signature(self.guide_path),
             file_signature(self.scenarios_path),
             file_signature(self.evidence_path),
+            file_signature(self.claude_path),
         )
 
     def public_manifest(self) -> dict[str, Any]:
@@ -369,9 +414,13 @@ class AnnotationStore:
                 guide = read_json(self.guide_path) if self.guide_path.is_file() else {}
                 scenarios = read_json(self.scenarios_path) if self.scenarios_path.is_file() else {}
                 evidence = read_json(self.evidence_path) if self.evidence_path.is_file() else {}
-                self._public_manifest_cache = attach_evidence_notes(
-                    attach_scenarios(enrich_public_manifest(manifest, guide), scenarios),
-                    evidence,
+                claude = read_json(self.claude_path) if self.claude_path.is_file() else {}
+                self._public_manifest_cache = attach_claude_notes(
+                    attach_evidence_notes(
+                        attach_scenarios(enrich_public_manifest(manifest, guide), scenarios),
+                        evidence,
+                    ),
+                    claude,
                 )
                 self._public_manifest_signature = signature
             return self._public_manifest_cache

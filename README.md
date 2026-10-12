@@ -109,7 +109,7 @@ ssh -L 8765:127.0.0.1:8765 USER@SERVER
    - `得分`：`yes`
    - `不得分`：`no`
    - `证据不足`：`unsure`
-5. 每个 rubric 带有提示，说明看到什么证据就可以判得分。
+5. 每个 rubric 带有提示，说明看到什么证据就可以判得分。下面还有一块「Claude Opus 5.5 的判断」，直接给出得分、不得分或证据不足，并写明打开第几张截图能看到什么。
 6. 页面会自动保存。如果这条里还有模型没判完，会先切到那个模型；都判完了再进入下一条。
 
 服务端结果保存到：
@@ -121,6 +121,22 @@ annotations/<标注员姓名>.json
 写入使用临时文件加原子替换。浏览器还会保存一份本地恢复副本，并提供“下载备份”按钮。不同标注员必须使用不同姓名；同名代表继续同一份记录。
 
 服务端 JSON 中包含私有的模型槽位映射，便于之后直接按模型汇总。这个映射、自动评分和原始结果路径不会发给标注页面。
+
+## Claude Opus 5.5 的判断
+
+判断存在 `data/claude_notes.json`，按 case、模型槽位、rubric 存放。每条有 `decision`（`yes` / `no` / `unsure`）、`frames`（截图编号，和网页上的第 N 张一致）、`evidence` 和 `reason`。110 个 case、9 个模型、3960 条 rubric 都有。
+
+这些判断是 Claude Opus 5.5 逐条看截图和最终回答写的，不是关键词匹配。判的时候只看公开的轨迹和截图，没有看自动评分和 Grok 的提示。只有先试做的 `art--80257c727b8e--practical` 这一条，判之前看到过模型对照，其余 109 条不知道哪个槽位是哪个模型。9 个模型里有一个就是 Claude Opus 5.5，它那一格是自己判自己。
+
+重判某个模型时，先看轨迹，再把新的判断写回去：
+
+```bash
+python3 tools/show_trace.py <case_id> <槽位> --chars 900
+python3 tools/show_trace.py <case_id> <槽位> --only 12,40 --chars 6000
+python3 tools/save_claude_notes.py <case_id> <槽位> < notes.json
+```
+
+`show_trace.py` 打印任务、rubric、每张截图的页面文字和最终回答，不打印模型名。`save_claude_notes.py` 会检查 rubric 是否齐全、截图编号是否存在，再加锁合并进文件。服务会自动读到新文件，刷新网页即可。
 
 ## 快捷键
 

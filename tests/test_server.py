@@ -14,6 +14,7 @@ sys.path.insert(0, str(PROJECT))
 
 from server import (  # noqa: E402
     AnnotationStore,
+    attach_claude_notes,
     attach_evidence_notes,
     create_server,
     enrich_public_manifest,
@@ -199,6 +200,31 @@ class ServerTest(unittest.TestCase):
         self.assertEqual(note["support"], "partial")
         self.assertEqual(noted["evidence_credit"], "Grok 4.7")
         self.assertNotIn("evidence_notes", noted["cases"][0]["outputs"][1])
+        judged = attach_claude_notes(
+            noted,
+            {
+                "credit": "Claude Opus 5.5",
+                "cases": {
+                    "case-1": {
+                        "A": {
+                            "R1": {
+                                "decision": "unsure",
+                                "frames": [3, 3, True],
+                                "evidence": "第 3 张被弹窗挡住。",
+                                "reason": "看不到要求的内容。",
+                            },
+                            "R2": {"decision": "partial", "frames": [], "evidence": "x", "reason": "y"},
+                        }
+                    }
+                },
+            },
+        )
+        claude = judged["cases"][0]["outputs"][0]["claude_notes"]
+        self.assertEqual(set(claude), {"R1"})
+        self.assertEqual(claude["R1"]["frames"], [3])
+        self.assertEqual(claude["R1"]["decision"], "unsure")
+        self.assertEqual(judged["claude_credit"], "Claude Opus 5.5")
+        self.assertIn("evidence_notes", judged["cases"][0]["outputs"][0])
         self.assertNotIn("model", json.dumps(enriched))
         store = AnnotationStore(self.root)
         manifest = store.public_manifest()
